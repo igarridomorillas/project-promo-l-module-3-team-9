@@ -1,0 +1,131 @@
+.design {
+  padding-top: rem(22);
+  &__label {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0;
+  }
+
+  &__radio {
+    margin: 0 rem(10) rem(15) 0;
+  }
+
+  &__color {
+    display: inline-block;
+    width: rem(30);
+    height: rem(25);
+    overflow: hidden;
+    color: rgba($color: white, $alpha: 0);
+  }
+}
+.colors {
+  height: rem(25);
+  padding-right: rem(90);
+  text-transform: uppercase;
+  font-family: $fontText;
+  font-size: rem(14);
+  color: $colorComplementaryA;
+}
+
+.palette1 {
+  margin-bottom: rem(15);
+  .color1 {
+    background-color: $colorPalette1A;
+  }
+  .color2 {
+    background-color: $colorPalette1B;
+  }
+  .color3 {
+    background-color: $colorPalette1C;
+  }
+  .sample {
+    background: linear-gradient(rgba($colorMediaC, 0.7), white);
+  }
+  .js-namePreview {
+    color: $colorPalette1A;
+  }
+  .sample__bar {
+    background-color: $colorPalette1B;
+  }
+  .social__menu--item {
+    border: rem(2) solid $colorPalette1C;
+  }
+}
+
+.palette2 {
+  margin-bottom: rem(15);
+  .color1 {
+    background-color: $colorPalette2A;
+  }
+  .color2 {
+    background-color: $colorPalette2B;
+  }
+  .color3 {
+    background-color: $colorPalette2C;
+  }
+  .sample {
+    background: linear-gradient(rgba($colorPalette2C, 0.7), white);
+  }
+  .js-namePreview {
+    color: $colorPalette2A;
+  }
+  .sample__bar {
+    background-color: $colorPalette2B;
+  }
+  .social__menu--item {
+    border: rem(2) solid $colorPalette2C;
+  }
+}
+
+.palette3 {
+  margin-bottom: rem(15);
+  .color1 {
+    background-color: $colorPalette3A;
+  }
+  .color2 {
+    background-color: $colorPalette3B;
+  }
+  .color3 {
+    background-color: $colorPalette3C;
+  }
+  .sample {
+    background: linear-gradient(rgba($colorPalette3C, 0.7), white);
+  }
+  .js-namePreview {
+    color: $colorPalette3A;
+  }
+  .sample__bar {
+    background-color: $colorPalette3B;
+  }
+  .social__menu--item {
+    border: rem(2) solid $colorPalette3C;
+  }
+}
+.palette4 {
+  margin-bottom: rem(15);
+  .color1 {
+    background-color: $colorPalette4A;
+  }
+  .color2 {
+    background-color: $colorPalette4B;
+  }
+  .color3 {
+    background-color: $colorPalette4C;
+  }
+  .sample {
+    background: linear-gradient(rgba($colorPalette4C, 0.7), white);
+  }
+  .js-namePreview {
+    color: $colorPalette4A;
+  }
+  .sample__bar {
+    background-color: $colorPalette4B;
+  }
+  .social__menu--item {
+    border: rem(2) solid $colorPalette4C;
+  }
+  // .filter {
+  //   filter: grayscale(100%);
+  // }
+}
