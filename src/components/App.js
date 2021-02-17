@@ -1,5 +1,6 @@
-import logo from "./logo.svg";
-import "./App.css";
+import "../stylesheets/App.scss";
+import logoHeader from "../images/thisismeLogo@2x.png";
+import logoCard from "../images/logo-card.png";
 
 function App() {
   const AppHeader = (
@@ -8,7 +9,7 @@ function App() {
         <img
           className="header__wrapper--brandCard"
           title="logo"
-          src="./assets/images/thisismeLogo@2x.png"
+          src={logoHeader}
           alt="Logo This is me"
         />
       </div>
@@ -67,7 +68,7 @@ function App() {
                         target="_blank"
                       >
                         <img
-                          src="./assets/images/favicon.png"
+                          src={logoCard}
                           className="social__menu--icon homeIcon filter"
                           title="thisIsMe web"
                           alt="this is me logo"
