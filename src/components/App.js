@@ -3,6 +3,7 @@ import logoHeader from "../images/thisismeLogo@2x.png";
 import logoCard from "../images/logo-card.png";
 
 function App() {
+  /* MARTA */
   const AppHeader = (
     <header className="header">
       <div className="header__wrapper">
@@ -15,9 +16,11 @@ function App() {
       </div>
     </header>
   );
+  /* ESTO SE QUEDA */
   const AppMain = (
     <main className="mainProfile">
       <div className="mainProfile__wrapper">
+        {/* CRISTINA */}
         <section className="resetSection">
           <div className="resetSection__wrapper">
             <div className="trash">
@@ -81,8 +84,10 @@ function App() {
             </article>
           </div>
         </section>
+        {/* ESTO SE QUEDA */}
         <form className="form js-form" action="" method="POST">
           <div className="form__wrapper">
+            {/* MERCHE */}
             <fieldset className="collapsable js-slide1">
               <legend className="collapsable__header js-design">
                 <i
@@ -161,6 +166,7 @@ function App() {
                 </label>
               </div>
             </fieldset>
+            {/* NOBODY */}
             <fieldset className="collapsable js-slide2">
               <legend className="collapsable__header js-fill">
                 <i
@@ -260,6 +266,7 @@ function App() {
                 />
               </div>
             </fieldset>
+            {/* NATALIA */}
             <fieldset className="collapsable js-slide3">
               <legend className="collapsable__header js-share">
                 <i
@@ -307,11 +314,13 @@ function App() {
               </h4>
               <p className="js-consoleError"></p>
             </section>
+            {/* ESTO SE QUEDA */}
           </div>
         </form>
       </div>
     </main>
   );
+  /* MARTA */
   const AppFooter = (
     <footer className="footer">
       <div className="footer__wrapper">
@@ -335,3 +344,16 @@ function App() {
 }
 
 export default App;
+
+/* function App() {
+  <div className="App">
+    <Header/>
+    <Card-preview/>
+    <Form>
+      <Design/>
+      <Fill/>
+      <Share/>
+    </Form>
+    <Footer/>
+  </div>
+} */
