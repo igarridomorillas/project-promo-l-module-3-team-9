@@ -1,9 +1,13 @@
 import "../stylesheets/App.scss";
 import logoHeader from "../images/thisismeLogo@2x.png";
 import logoCard from "../images/logo-card.png";
+import Header from "./Header.js";
+import Footer from "./Footer.js";
+
 
 function App() {
   /* MARTA */
+  <Header/>/*
   const AppHeader = (
     <header className="header">
       <div className="header__wrapper">
@@ -15,7 +19,7 @@ function App() {
         />
       </div>
     </header>
-  );
+  );*/
   /* ESTO SE QUEDA */
   const AppMain = (
     <main className="mainProfile">
@@ -321,6 +325,7 @@ function App() {
     </main>
   );
   /* MARTA */
+  <Footer/>/*
   const AppFooter = (
     <footer className="footer">
       <div className="footer__wrapper">
@@ -332,12 +337,12 @@ function App() {
         />
       </div>
     </footer>
-  );
+  );*/
   /* <script type="text/javascript" src="./assets/js/main.js"></script> */
 
   const AppReturn = (
     <div className="App">
-      {AppHeader} {AppMain} {AppFooter}
+      <Header/> {AppMain} <Footer/>
     </div>
   );
   return AppReturn;
