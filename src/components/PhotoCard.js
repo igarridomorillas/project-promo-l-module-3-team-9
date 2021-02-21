@@ -4,11 +4,7 @@ import "../stylesheets/core/_mixins.scss";
 import "../stylesheets/core/_variables.scss";
 import "../stylesheets/layout/_resetSection.scss";
 
-class PhotoCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
+function PhotoCard(){
     return (
       <section className="resetSection">
         <div className="resetSection__wrapper">
@@ -75,6 +71,6 @@ class PhotoCard extends React.Component {
       </section>
     );
   }
-}
+
 
 export default PhotoCard;
