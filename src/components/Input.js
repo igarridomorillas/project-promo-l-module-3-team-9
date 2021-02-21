@@ -17,7 +17,7 @@ function Input(props) {
           props.name +
           " js-inputText js-input" +
           props.name
-        }
+        } //comprobar las mayusculas de cada clase, a lo mejor hay que cambiarlas
         placeholder={props.placeholder}
       />
     </>
