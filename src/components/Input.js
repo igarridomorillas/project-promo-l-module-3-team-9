@@ -8,7 +8,7 @@ function Input(props) {
       </label>
 
       <input
-        name={props.fullname} //cambiando el name del nombre podemos hacer que esta sea props.name y eliminar fullname de cada input en fill
+        name={props.name}
         value=""
         type={props.type}
         id={props.name}

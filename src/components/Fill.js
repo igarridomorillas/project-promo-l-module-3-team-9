@@ -11,14 +11,12 @@ function Fill(props) {
         <Input
           name="name"
           label="Nombre completo"
-          fullname="full_name"
           type="text"
           placeholder="Ej: Sally Jill"
         />
         <Input
           name="job"
           label="Puesto"
-          fullname="job"
           type="text"
           placeholder="Ej: Front-end unicorn"
         />
@@ -37,28 +35,24 @@ function Fill(props) {
         <Input
           name="email"
           label="Email"
-          fullname="email"
           type="email"
           placeholder="Ej: sally-hill@gmail.com"
         />
         <Input
           name="phone"
           label="Teléfono"
-          fullname="phone"
           type="tel"
           placeholder="Ej: 555666888"
         />
         <Input
           name="linkedin"
           label="Linkedin"
-          fullname="linkedin"
           type="text"
           placeholder="Ej: linkekin.com/in/sally..sally-hill"
         />
         <Input
           name="github"
           label="Github"
-          fullname="github"
           type="text"
           placeholder="Ej: @sally-hill"
         />
