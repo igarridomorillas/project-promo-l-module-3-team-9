@@ -1,20 +1,10 @@
 import "../stylesheets/layout/_shareSection.scss";
 
-function Share() {
+function Share(props) {
   return (
     <>
       <fieldset className="collapsable js-slide3">
-        <legend className="collapsable__header js-share">
-          <i
-            className="collapsable__header--icon fa fa-share-alt"
-            aria-hidden="true"
-          ></i>
-          <span className="collapsable__title">Comparte</span>
-          <i
-            className="collapsable__header--arrow  collapsable__turn fa fa-angle-down"
-            aria-hidden="true"
-          ></i>
-        </legend>
+        <div>{props.children}</div>
 
         <div className="shareContainer js-content">
           <section className="share collapsable__hide">
