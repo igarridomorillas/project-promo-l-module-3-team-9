@@ -1,7 +1,8 @@
 import React from "react";
 import "../stylesheets/layout/_fillSection.scss";
-class Fill extends React.Component {
-  render() {
+
+
+  function Fill() {
     return (
       <fieldset className="collapsable js-slide2">
         <legend className="collapsable__header js-fill">
@@ -104,6 +105,6 @@ class Fill extends React.Component {
       </fieldset>
     );
   }
-}
+
 
 export default Fill;

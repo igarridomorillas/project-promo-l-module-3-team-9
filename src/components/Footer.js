@@ -3,13 +3,8 @@ import React from 'react';
 import logoAdalab from "../images/logo-adalab.png";
 
 
+function Footer(){
 
-class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
       return(
         <footer className="footer">
         <div className="footer__wrapper">
@@ -24,6 +19,6 @@ class Footer extends React.Component {
 
       );
   }
-}
+
 export default Footer;
 

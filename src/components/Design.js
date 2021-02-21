@@ -1,7 +1,7 @@
 import React from "react";
 import "../stylesheets/layout/_designSection.scss";
-class Design extends React.Component {
-  render() {
+
+function Design(){
     return (
       <fieldset className="collapsable js-slide1">
         <legend className="collapsable__header js-design">
@@ -83,5 +83,5 @@ class Design extends React.Component {
       </fieldset>
     );
   }
-}
+
 export default Design;
