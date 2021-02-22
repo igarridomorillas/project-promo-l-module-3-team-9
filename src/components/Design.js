@@ -1,5 +1,6 @@
 import React from "react";
 import "../stylesheets/layout/_designSection.scss";
+import Palettes from "./palettes";
 
 function Design(props) {
   return (
@@ -7,9 +8,11 @@ function Design(props) {
       <div>{props.children}</div>
 
       <div className="open collapsable__hide  design  js-content">
+
+    
         <label htmlFOR="palette1" className="design__label">
           <div className="colors">Colores</div>
-          <input
+          <Palettes 
             id="palette1"
             type="radio"
             value="1"
@@ -17,57 +20,43 @@ function Design(props) {
             className="design__radio js-palette"
             checked
           />
+        
 
-          <ul className="palette1">
-            <li className="design__color color1">Color A</li>
-            <li className="design__color color2">Color B</li>
-            <li className="design__color color3">Color C</li>
-          </ul>
         </label>
-
+       
         <label htmlFOR="palette2" className="design__label">
-          <input
+        <Palettes 
             id="pallete2"
             type="radio"
             value="2"
             name="palette"
             className="design__radio js-palette"
           />
-          <ul className="palette2">
-            <li className="design__color color1">Color A</li>
-            <li className="design__color color2">Color B</li>
-            <li className="design__color color3">Color C</li>
-          </ul>
+         
         </label>
 
         <label htmlFOR="palette3" className="design__label">
-          <input
+        <Palettes 
             id="palette3"
             type="radio"
             value="3"
             name="palette"
             className="design__radio js-palette"
-          />
-          <ul className="palette3">
-            <li className="design__color color1">Color A</li>
-            <li className="design__color color2">Color B</li>
-            <li className="design__color color3">Color C</li>
-          </ul>
+        />
+          
+        
         </label>
 
         <label htmlFOR="palette4" className="design__label">
-          <input
+          <Palettes
             id="palette4"
             type="radio"
             value="4"
             name="palette"
             className="design__radio js-palette"
           />
-          <ul className="palette4">
-            <li className="design__color color1">Color A</li>
-            <li className="design__color color2">Color B</li>
-            <li className="design__color color3">Color C</li>
-          </ul>
+     
+          
         </label>
       </div>
     </fieldset>
