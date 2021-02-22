@@ -1,27 +1,33 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Input(props) {
+  const handleInputChange = (ev) => {
+    console.log("Me están cambiando", ev.currentTarget.value);
+  };
   return (
     <>
-      <label htmlFOR={props.name} className="form__label">
+      <label htmlFor={props.name} className="form__label">
         {props.label}
       </label>
 
       <input
         name={props.name}
-        value=""
         type={props.type}
         id={props.name}
-        className={
-          "form__inputText js-" +
-          props.name +
-          " js-inputText js-input" +
-          props.name
-        } //comprobar las mayusculas de cada clase, a lo mejor hay que cambiarlas
+        className={"form__inputText"} //comprobar las mayusculas de cada clase, a lo mejor hay que cambiarlas
         placeholder={props.placeholder}
+        onChange={handleInputChange}
       />
     </>
   );
 }
+
+Input.propTypes = {
+  name: PropTypes.string,
+  label: PropTypes.string,
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+};
 
 export default Input;

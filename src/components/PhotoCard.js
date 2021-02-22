@@ -5,7 +5,7 @@ import "../stylesheets/core/_variables.scss";
 import "../stylesheets/layout/_resetSection.scss";
 import Reset from "./Reset";
 
-function PhotoCard() {
+function PhotoCard(props) {
   return (
     <section className="resetSection">
       <div className="resetSection__wrapper">
@@ -13,9 +13,9 @@ function PhotoCard() {
         <article className="js-card">
           <div className="sample">
             <div className="sample__bar"></div>
-            <h3 className="sample__name js-namePreview">Nombre Apellido</h3>
+            <h3 className="sample__name js-namePreview">{props.name}</h3>
             <h4 className="sample__subtitle js-positionPreview">
-              Front-end developer
+              {props.position}
             </h4>
             <div className="sample__photo js-profileImage"></div>
             <nav className="social">
@@ -65,5 +65,11 @@ function PhotoCard() {
     </section>
   );
 }
+
+//Le paso props y pinto name y position con el render de PhotoCard (incrustándolas con {} en el JSX). Pero como su madre -Main, en este caso- realmente no las ha definido, con default props puedo elegir cuáles quiero que tenga por defecto. CUIDADO porque si en Main pongo esto <PhotoCard name="" position=""/>, las defaultProps interpretarán que le está pasando a su hija un string vacío, y no se "activarán".
+PhotoCard.defaultProps = {
+  name: "Nombre Apellido",
+  position: "Front-End Developer",
+};
 
 export default PhotoCard;

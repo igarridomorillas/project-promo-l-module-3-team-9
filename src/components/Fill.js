@@ -22,7 +22,7 @@ function Fill(props) {
           placeholder="Ej: Front-end unicorn"
         />
 
-        <label htmlFOR="photo" className="form__label">
+        <label htmlFor="photo" className="form__label">
           Imagen de perfil
         </label>
         <div className="photo">
