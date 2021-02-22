@@ -1,5 +1,6 @@
 import React from "react";
 import "../stylesheets/layout/_fillSection.scss";
+import LittlePreview from "./LittlePreview";
 
 function Fill(props) {
   return (
@@ -40,7 +41,7 @@ function Fill(props) {
             Añadir imagen
           </button>
           <input className="hidden js-profileUploadBtn" type="file" />
-          <div className="photo__preview js-inputText js-profilePreview"></div>
+          <LittlePreview />
         </div>
 
         <label htmlFOR="email" className="form__label">
