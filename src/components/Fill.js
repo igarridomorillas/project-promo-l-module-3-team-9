@@ -1,6 +1,7 @@
 import React from "react";
 import "../stylesheets/layout/_fillSection.scss";
 import LittlePreview from "./LittlePreview";
+import Input from "./Input";
 
 function Fill(props) {
   return (
@@ -8,29 +9,17 @@ function Fill(props) {
       <div>{props.children}</div>
 
       <div className="collapsable__hide fill js-content">
-        <label htmlFOR="name" className="form__label">
-          Nombre completo
-        </label>
-
-        <input
-          name="full_name"
-          value=""
+        <Input
+          name="name"
+          label="Nombre completo"
           type="text"
-          id="name"
-          className="form__inputText js-name js-inputText js-inputName"
           placeholder="Ej: Sally Jill"
         />
-
-        <label htmlFOR="job" className="form__label">
-          Puesto
-        </label>
-        <input
+        <Input
           name="job"
-          value=""
+          label="Puesto"
           type="text"
-          id="job"
-          className="form__inputText js-position js-inputText js-inputJob"
-          placeholder="Ej: Front-end unicorn "
+          placeholder="Ej: Front-end unicorn"
         />
 
         <label htmlFOR="photo" className="form__label">
@@ -44,51 +33,28 @@ function Fill(props) {
           <LittlePreview />
         </div>
 
-        <label htmlFOR="email" className="form__label">
-          Email
-        </label>
-        <input
+        <Input
           name="email"
-          value=""
-          id="email"
+          label="Email"
           type="email"
-          className="js-email form__inputText js-inputText js-inputEmail"
-          placeholder="Ej: sally-hill@gmail.com "
+          placeholder="Ej: sally-hill@gmail.com"
         />
-
-        <label htmlFOR="phone" className="form__label">
-          Teléfono
-        </label>
-        <input
+        <Input
           name="phone"
-          value=""
-          id="phone"
+          label="Teléfono"
           type="tel"
-          className="form__inputText js-phone js-inputText js-inputPhone"
           placeholder="Ej: 555666888"
         />
-
-        <label htmlFOR="linkedin" className="form__label">
-          Linkedin
-        </label>
-        <input
+        <Input
           name="linkedin"
-          value=""
-          id="linkedin"
+          label="Linkedin"
           type="text"
-          className="js-linkedin form__inputText js-inputText js-inputLinkedin"
           placeholder="Ej: linkekin.com/in/sally..sally-hill"
         />
-
-        <label htmlFOR="github" className="form__label">
-          Github
-        </label>
-        <input
+        <Input
           name="github"
-          value=""
-          id="github"
+          label="Github"
           type="text"
-          className="form__inputText js-github js-inputText js-inputGithub"
           placeholder="Ej: @sally-hill"
         />
       </div>
