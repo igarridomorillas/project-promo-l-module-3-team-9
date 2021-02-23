@@ -6,7 +6,7 @@ import React, { useState } from "react";
 function Collapsable() {
   const [classDesign, setClassDesign] = useState("collapsable--open");
   const changeClassDesign = () => {
-    if (classDesign === "collapsable--open") {
+    if (classDesign === "collapsable--open" ) {
       setClassDesign("collapsable--close");
     } else {
       setClassDesign("collapsable--open");
@@ -14,18 +14,18 @@ function Collapsable() {
   };
   const [classFill, setClassFill] = useState("collapsable--open");
   const changeClassFill = () => {
-    if (classFill === "collapsable--open") {
-      setClassFill("collapsable--close");
-    } else {
+    if (classFill === "") {
       setClassFill("collapsable--open");
+    } else {
+      setClassFill("");
     }
   };
   const [classShare, setClassShare] = useState("collapsable--open");
   const changeClassShare = () => {
-    if (classShare === "collapsable--open") {
-      setClassShare("collapsable--close");
-    } else {
+    if (classShare === "") {
       setClassShare("collapsable--open");
+    } else {
+      setClassShare("");
     }
   };
 
@@ -42,7 +42,7 @@ function Collapsable() {
           ></i>
           <span className="collapsable__title">Diseña</span>
           <i
-            className="collapsable__header--arrow  collapsable__turn fa fa-angle-up"
+            className="collapsable__header--arrow  collapsable__turn fa fa-angle-down"
             aria-hidden="true"
           ></i>
         </legend>
@@ -58,7 +58,7 @@ function Collapsable() {
           ></i>
           <span className="collapsable__title">Rellena</span>
           <i
-            className="collapsable__header--arrow  collapsable__turn fa fa-angle-up"
+            className="collapsable__header--arrow  collapsable__turn fa fa-angle-down"
             aria-hidden="true"
           ></i>
         </legend>
@@ -74,7 +74,7 @@ function Collapsable() {
           ></i>
           <span className="collapsable__title">Comparte</span>
           <i
-            className="collapsable__header--arrow  collapsable__turn fa fa-angle-up"
+            className="collapsable__header--arrow  collapsable__turn fa fa-angle-down"
             aria-hidden="true"
           ></i>
         </legend>
