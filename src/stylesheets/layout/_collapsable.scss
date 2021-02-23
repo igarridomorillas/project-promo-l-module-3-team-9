@@ -1,3 +1,4 @@
+//COLLAPSABLES MOSTRAR/OCULTAR LINEA 50-74
 .collapsable {
     height: auto;
     text-decoration: none;
@@ -64,8 +65,9 @@
         &__hide {
             display: none;
         }
-        &__turn {
-            transform: rotate(180deg);
-        }
+        /* 
+    &__turn {
+      transform: rotate(180deg); 
+    }*/
     }
 }
