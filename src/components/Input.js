@@ -15,7 +15,7 @@ function Input(props) {
         name={props.name}
         type={props.type}
         id={props.name}
-        className={"form__inputText"} //comprobar las mayusculas de cada clase, a lo mejor hay que cambiarlas
+        className={"form__inputText"}
         placeholder={props.placeholder}
         onChange={handleInputChange}
       />

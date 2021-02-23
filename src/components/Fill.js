@@ -5,7 +5,7 @@ import Input from "./Input";
 
 function Fill(props) {
   return (
-    <fieldset className="collapsable js-slide2">
+    <fieldset className={"collapsable js-slide2 " + props.className}>
       <div>{props.children}</div>
 
       <div className="collapsable__hide fill js-content">

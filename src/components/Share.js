@@ -4,7 +4,7 @@ import ShareCreated from "./ShareCreated";
 function Share(props) {
   return (
     <>
-      <fieldset className="collapsable js-slide3">
+      <fieldset className={"collapsable js-slide3 " + props.className}>
         <div>{props.children}</div>
 
         <div className="shareContainer js-content">

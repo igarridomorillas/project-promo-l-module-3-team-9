@@ -1,10 +1,10 @@
 import React from "react";
 import "../stylesheets/layout/_designSection.scss";
-import Palettes from "./palettes";
+import Palettes from "./Palettes";
 
 function Design(props) {
   return (
-    <fieldset className="collapsable js-slide1">
+    <fieldset className={"collapsable js-slide1 " + props.className}>
       <div>{props.children}</div>
 
       <div className="open collapsable__hide  design  js-content">
@@ -16,7 +16,7 @@ function Design(props) {
             value="1"
             name="palette"
             className="design__radio js-palette"
-            // defaultChecked
+            checked
           />
         </label>
 

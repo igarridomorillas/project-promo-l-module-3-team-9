@@ -17,7 +17,7 @@ function Palettes(props) {
         value={props.value}
         name={props.name}
         className="design__radio js-palette"
-        // defaultChecked
+        defaultChecked={props.checked}
       />
       <ul className={"palette" + props.value}>{paintList}</ul>
     </label>
