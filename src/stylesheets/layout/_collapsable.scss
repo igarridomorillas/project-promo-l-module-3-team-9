@@ -1,0 +1,57 @@
+.collapsable {
+  height: auto;
+  text-decoration: none;
+  border: none;
+  padding-bottom: rem(10);
+  border-bottom: rem(1) solid $colorBorFooter;
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(10);
+    cursor: pointer;
+    &--icon {
+      padding-top: rem(3);
+      color: $colorIcon;
+      font-size: $sizeTitle;
+    }
+    &--arrow {
+      font-size: $sizeTitle;
+      color: $colorSections;
+      padding-top: rem(3);
+    }
+  }
+  &__title {
+    flex-grow: 0.9;
+    font-size: $sizeTitle;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: $fontText;
+    color: $colorSections;
+  }
+}
+
+//clases especiales collapsables
+.fill,
+.share {
+  display: none;
+}
+
+.collapsable.collapsable--open {
+  .collapsable {
+    &__hide {
+      display: block;
+    }
+    &__turn {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.collapsable.collapsable--close {
+  .collapsable {
+    &__hide {
+      display: none;
+    }
+  }
+}
