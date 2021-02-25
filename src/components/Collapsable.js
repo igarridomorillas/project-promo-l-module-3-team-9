@@ -6,7 +6,7 @@ import React, { useState } from "react";
 function Collapsable(props) {
   const [classDesign, setClassDesign] = useState("collapsable--open");
   const changeClassDesign = () => {
-    if (classDesign === "collapsable--open" ) {
+    if (classDesign === "collapsable--open") {
       setClassDesign("collapsable--close");
     } else {
       setClassDesign("collapsable--open");
@@ -47,7 +47,11 @@ function Collapsable(props) {
           ></i>
         </legend>
       </Design>
-      <Fill className={classFill} name={props.name} value={props.name}>
+      <Fill
+        className={classFill}
+        handleInputLifting={props.handleInputLifting}
+        /* name={props.name} */ value={props.value}
+      >
         <legend
           className="collapsable__header js-fill"
           onClick={changeClassFill}

@@ -11,10 +11,11 @@ function Fill(props) {
       <div className="collapsable__hide fill js-content">
         <Input
           name="name"
-          value={props.name}
+          value={props.value}
           label="Nombre completo"
           type="text"
           placeholder="Ej: Sally Jill"
+          handleInputLifting={props.handleInputLifting}
         />
         <Input
           name="job"

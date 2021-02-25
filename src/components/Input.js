@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Input(props) {
-  const handleInputChange = (ev) => {
-    console.log("Me están cambiando", ev.currentTarget.value);
+  const handleInput = (ev) => {
+    console.log("Me están cambiando", ev.target.value);
+    props.handleInputLifting(ev.target.value);
   };
   return (
     <>
@@ -13,11 +14,12 @@ function Input(props) {
 
       <input
         name={props.name}
+        value={props.value}
         type={props.type}
         id={props.name}
         className={"form__inputText"}
         placeholder={props.placeholder}
-        onChange={handleInputChange}
+        onChange={handleInput}
       />
     </>
   );
