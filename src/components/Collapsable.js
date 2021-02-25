@@ -3,7 +3,7 @@ import Fill from "./Fill";
 import Share from "./Share";
 import React, { useState } from "react";
 
-function Collapsable() {
+function Collapsable(props) {
   const [classDesign, setClassDesign] = useState("collapsable--open");
   const changeClassDesign = () => {
     if (classDesign === "collapsable--open" ) {
@@ -47,7 +47,7 @@ function Collapsable() {
           ></i>
         </legend>
       </Design>
-      <Fill className={classFill}>
+      <Fill className={classFill} name={props.name} value={props.name}>
         <legend
           className="collapsable__header js-fill"
           onClick={changeClassFill}

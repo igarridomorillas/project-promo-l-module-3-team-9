@@ -11,6 +11,7 @@ function Fill(props) {
       <div className="collapsable__hide fill js-content">
         <Input
           name="name"
+          value={props.name}
           label="Nombre completo"
           type="text"
           placeholder="Ej: Sally Jill"

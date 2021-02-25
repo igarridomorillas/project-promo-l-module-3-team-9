@@ -7,8 +7,8 @@ function Main() {
   return (
     <main className="mainProfile mainProfile__wrapper">
       {/* <div className="mainProfile__wrapper"> */}
-      <PhotoCard />
-      <Form />
+      <PhotoCard name={name} />
+      <Form name={name} />
       {/* </div> */}
     </main>
   );
