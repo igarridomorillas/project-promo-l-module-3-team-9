@@ -11,7 +11,7 @@ function Fill(props) {
       <div className="collapsable__hide fill js-content">
         <Input
           name="name"
-          value={props.value}
+          //value={props.name} //cambiado value por name
           label="Nombre completo"
           type="text"
           placeholder="Ej: Sally Jill"
@@ -19,7 +19,7 @@ function Fill(props) {
         />
         <Input
           name="job"
-          value={props.value}
+          //value={props.job} //cambiado value por job
           label="Puesto"
           type="text"
           placeholder="Ej: Front-end unicorn"
@@ -39,7 +39,7 @@ function Fill(props) {
 
         <Input
           name="email"
-          value={props.value}
+          //value={props.email} //cambiado value por email
           label="Email"
           type="email"
           placeholder="Ej: sally-hill@gmail.com"
@@ -47,7 +47,7 @@ function Fill(props) {
         />
         <Input
           name="phone"
-          value={props.value}
+          //value={props.phone} //cambiado value por phone
           label="Teléfono"
           type="tel"
           placeholder="Ej: 555666888"
@@ -55,7 +55,7 @@ function Fill(props) {
         />
         <Input
           name="linkedin"
-          value={props.value}
+          //value={props.linkedin} //cambiado value por linkedin
           label="Linkedin"
           type="text"
           placeholder="Ej: linkekin.com/in/sally..sally-hill"
@@ -63,7 +63,7 @@ function Fill(props) {
         />
         <Input
           name="github"
-          value={props.value}
+          //value={props.github} //cambiado value por github
           label="Github"
           type="text"
           placeholder="Ej: @sally-hill"

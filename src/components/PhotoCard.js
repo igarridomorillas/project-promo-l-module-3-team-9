@@ -23,25 +23,39 @@ function PhotoCard(props) {
             <nav className="social">
               <ul className="social__menu">
                 <li className="social__menu--item">
-                  <a href="" className="js-phonePreview">
+                  <a
+                    className="js-phonePreview"
+                    href={props.phone === "" ? "#" : `telto:${props.phone}`}
+                  >
                     <i className="fas fa-mobile-alt"></i>
                   </a>
                 </li>
 
                 <li className="social__menu--item">
-                  <a className="js-emailPreview" href="">
+                  <a
+                    className="js-emailPreview"
+                    href={props.email === "" ? "#" : `mailto:${props.email}`}
+                  >
                     <i className="fas fa-envelope"></i>
                   </a>
                 </li>
 
                 <li className="social__menu--item">
-                  <a className="js-linkedinPreview" href="" target="_blank">
+                  <a
+                    className="js-linkedinPreview"
+                    href={props.linkedin}
+                    target="_blank"
+                  >
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                 </li>
 
                 <li className="social__menu--item">
-                  <a className="js-githubPreview" href="" target="_blank">
+                  <a
+                    className="js-githubPreview"
+                    href={props.github}
+                    target="_blank"
+                  >
                     <i className="fab fa-github-alt"></i>
                   </a>
                 </li>

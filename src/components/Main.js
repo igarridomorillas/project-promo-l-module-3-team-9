@@ -12,7 +12,6 @@ function Main() {
   const [github, setGithub] = useState("");
 
   const handleInputLifting = (inputValue, inputName) => {
-    /*     const key = ev.target.name; */
     if (inputName === "name") {
       setName(inputValue);
     } else if (inputName === "job") {
@@ -28,14 +27,6 @@ function Main() {
     } else if (inputName === "github") {
       setGithub(inputValue);
     }
-    /*     setPalettes(inputValue);
-    setName(inputValue);
-    setJob(inputValue);
-    setEmail(inputValue);
-    setPhone(inputValue);
-    setLinkedin(inputValue);
-    setGithub(inputValue);
-    console.log("Me están cambiando", inputValue); */
   };
 
   return (

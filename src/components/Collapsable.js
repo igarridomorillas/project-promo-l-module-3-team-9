@@ -50,7 +50,7 @@ function Collapsable(props) {
       <Fill
         className={classFill}
         handleInputLifting={props.handleInputLifting}
-        /* name={props.name} */ value={props.value}
+        /* name={props.name} */ //value={props.value} //cambiado value por name
       >
         <legend
           className="collapsable__header js-fill"

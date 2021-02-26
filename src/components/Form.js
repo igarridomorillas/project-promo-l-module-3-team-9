@@ -7,7 +7,7 @@ function Form(props) {
       {/* <div className="form__wrapper"> */}
       <Collapsable
         /* name={props.name} */ handleInputLifting={props.handleInputLifting}
-        value={props.name}
+        /* value={props.name} */
       />
       {/*  </div> */}
     </form>
