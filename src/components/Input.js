@@ -3,9 +3,15 @@ import PropTypes from "prop-types";
 
 function Input(props) {
   const handleInput = (ev) => {
-    console.log("Me están cambiando", ev.target.value);
-    props.handleInputLifting(ev.target.value);
+    props.handleInputLifting(ev.target.value, ev.target.name);
   };
+
+  /*   const handleInput = (ev) => {
+    props.handleInputLifting({
+    inputName:ev.target.value
+    inputValue:ev.target.value
+)}; */
+
   return (
     <>
       <label htmlFor={props.name} className="form__label">

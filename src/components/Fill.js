@@ -19,9 +19,11 @@ function Fill(props) {
         />
         <Input
           name="job"
+          value={props.value}
           label="Puesto"
           type="text"
           placeholder="Ej: Front-end unicorn"
+          handleInputLifting={props.handleInputLifting}
         />
 
         <label htmlFor="photo" className="form__label">
@@ -37,27 +39,35 @@ function Fill(props) {
 
         <Input
           name="email"
+          value={props.value}
           label="Email"
           type="email"
           placeholder="Ej: sally-hill@gmail.com"
+          handleInputLifting={props.handleInputLifting}
         />
         <Input
           name="phone"
+          value={props.value}
           label="Teléfono"
           type="tel"
           placeholder="Ej: 555666888"
+          handleInputLifting={props.handleInputLifting}
         />
         <Input
           name="linkedin"
+          value={props.value}
           label="Linkedin"
           type="text"
           placeholder="Ej: linkekin.com/in/sally..sally-hill"
+          handleInputLifting={props.handleInputLifting}
         />
         <Input
           name="github"
+          value={props.value}
           label="Github"
           type="text"
           placeholder="Ej: @sally-hill"
+          handleInputLifting={props.handleInputLifting}
         />
       </div>
     </fieldset>

@@ -13,9 +13,11 @@ function PhotoCard(props) {
         <article className="js-card">
           <div className="sample">
             <div className="sample__bar"></div>
-            <h3 className="sample__name js-namePreview">{props.name}</h3>
+            <h3 className="sample__name js-namePreview">
+              {props.name || "Nombre y Apellido"}
+            </h3>
             <h4 className="sample__subtitle js-positionPreview">
-              {props.position}
+              {props.job || "Front-end developer"}
             </h4>
             <div className="sample__photo js-profileImage"></div>
             <nav className="social">
@@ -65,11 +67,5 @@ function PhotoCard(props) {
     </section>
   );
 }
-
-//Le paso props y pinto name y position con el render de PhotoCard (incrustándolas con {} en el JSX). Pero como su madre -Main, en este caso- realmente no las ha definido, con default props puedo elegir cuáles quiero que tenga por defecto. CUIDADO porque si en Main pongo esto <PhotoCard name="" position=""/>, las defaultProps interpretarán que le está pasando a su hija un string vacío, y no se "activarán".
-PhotoCard.defaultProps = {
-  name: "Nombre Apellido",
-  position: "Front-End Developer",
-};
 
 export default PhotoCard;
