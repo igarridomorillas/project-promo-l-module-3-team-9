@@ -5,8 +5,7 @@ import Palettes from "./Palettes";
 function Design(props) {
   return (
     <fieldset className={"collapsable js-slide1 " + props.className}>
-      <div>{props.children}</div>
-
+      <div>{props.children}</div>git
       <div className="open collapsable__hide  design  js-content">
         <label htmlFor="palette1" className="design__label">
           <div className="colors">Colores</div>
