@@ -25,7 +25,7 @@ function PhotoCard(props) {
                 <li className="social__menu--item">
                   <a
                     className="js-phonePreview"
-                    href={props.phone === "" ? "#" : `telto:${props.phone}`}
+                    href={props.phone === "" ? "#" : `tel:${props.phone}`}
                   >
                     <i className="fas fa-mobile-alt"></i>
                   </a>
@@ -43,7 +43,11 @@ function PhotoCard(props) {
                 <li className="social__menu--item">
                   <a
                     className="js-linkedinPreview"
-                    href={props.linkedin}
+                    href={
+                      props.linkedin.includes("https://www.linkedin.com/in/")
+                        ? `${props.linkedin}`
+                        : `https://www.linkedin.com/in/${props.linkedin}`
+                    }
                     target="_blank"
                   >
                     <i className="fab fa-linkedin-in"></i>
@@ -53,7 +57,11 @@ function PhotoCard(props) {
                 <li className="social__menu--item">
                   <a
                     className="js-githubPreview"
-                    href={props.github}
+                    href={
+                      props.github.includes("https://www.github.com/")
+                        ? `${props.github}`
+                        : `https://www.github.com/${props.github}`
+                    }
                     target="_blank"
                   >
                     <i className="fab fa-github-alt"></i>
