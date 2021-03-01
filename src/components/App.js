@@ -1,14 +1,19 @@
 import "../stylesheets/App.scss";
-import Header from "./Header";
-import Footer from "./Footer";
-import Main from "./Main";
+import LandingPage from "./LandingPage";
+import CardPage from "./CardPage";
+import { Link, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <Switch>
+        <Route exact path="/">
+          <LandingPage />
+        </Route>
+        <Route path="/">
+          <CardPage />
+        </Route>
+      </Switch>
     </>
   );
 }
