@@ -38,7 +38,7 @@ function LandingPage() {
         </section>
         <div className="main__star">
           <div className="main__start--btn">
-            <Link to="/CardPage">Comenzar</Link>
+            <Link to="/cardpage">Comenzar</Link>
           </div>
         </div>
       </main>

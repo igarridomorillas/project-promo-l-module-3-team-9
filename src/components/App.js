@@ -10,7 +10,7 @@ function App() {
         <Route exact path="/">
           <LandingPage />
         </Route>
-        <Route path="/">
+        <Route path="/cardpage">
           <CardPage />
         </Route>
       </Switch>
