@@ -9,8 +9,8 @@ function PhotoCard(props) {
   return (
     <section className="resetSection">
       <div className="resetSection__wrapper">
-        <Reset />
-        <article className="js-card">
+        <Reset handleReset={props.handleReset} />
+        <article className={`js-card palette${props.palette}`}>
           <div className="sample">
             <div className="sample__bar"></div>
             <h3 className="sample__name js-namePreview">
@@ -58,7 +58,7 @@ function PhotoCard(props) {
                   <a
                     className="js-githubPreview"
                     href={
-                      props.linkedin.includes("https://github.com/")
+                      props.github.includes("https://github.com/")
                         ? `${props.github}`
                         : `https://github.com/${props.github}`
                     }

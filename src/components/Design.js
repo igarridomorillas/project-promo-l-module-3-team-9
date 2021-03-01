@@ -6,7 +6,6 @@ function Design(props) {
   return (
     <fieldset className={"collapsable js-slide1 " + props.className}>
       <div>{props.children}</div>
-
       <div className="open collapsable__hide  design  js-content">
         <label htmlFor="palette1" className="design__label">
           <div className="colors">Colores</div>
@@ -16,7 +15,8 @@ function Design(props) {
             value="1"
             name="palette"
             className="design__radio js-palette"
-            checked
+            handleInputLifting={props.handleInputLifting}
+            handleReset={props.handleReset}
           />
         </label>
 
@@ -27,6 +27,8 @@ function Design(props) {
             value="2"
             name="palette"
             className="design__radio js-palette"
+            handleInputLifting={props.handleInputLifting}
+            handleReset={props.handleReset}
           />
         </label>
 
@@ -37,6 +39,8 @@ function Design(props) {
             value="3"
             name="palette"
             className="design__radio js-palette"
+            handleInputLifting={props.handleInputLifting}
+            handleReset={props.handleReset}
           />
         </label>
 
@@ -47,6 +51,8 @@ function Design(props) {
             value="4"
             name="palette"
             className="design__radio js-palette"
+            handleInputLifting={props.handleInputLifting}
+            handleReset={props.handleReset}
           />
         </label>
       </div>

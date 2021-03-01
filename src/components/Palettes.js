@@ -9,6 +9,10 @@ function Palettes(props) {
     </li>
   ));
 
+  const handleInput = (ev) => {
+    props.handleInputLifting(ev.target.value, ev.target.name);
+  };
+
   return (
     <label htmlFor={props.htmlFor} className="design__label">
       <input
@@ -17,7 +21,7 @@ function Palettes(props) {
         value={props.value}
         name={props.name}
         className="design__radio js-palette"
-        defaultChecked={props.checked}
+        onClick={handleInput}
       />
       <ul className={"palette" + props.value}>{paintList}</ul>
     </label>
