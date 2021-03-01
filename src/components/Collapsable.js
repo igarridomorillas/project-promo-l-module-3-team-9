@@ -31,7 +31,10 @@ function Collapsable(props) {
 
   return (
     <>
-      <Design className={classDesign}>
+      <Design
+        className={classDesign}
+        handleInputLifting={props.handleInputLifting}
+      >
         <legend
           className="collapsable__header js-design"
           onClick={changeClassDesign}

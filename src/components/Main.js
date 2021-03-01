@@ -3,7 +3,7 @@ import PhotoCard from "./PhotoCard";
 import Form from "./Form";
 
 function Main() {
-  const [palettes, setPalettes] = useState(1);
+  const [palette, setPalettes] = useState("1");
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [email, setEmail] = useState("");
@@ -29,20 +29,31 @@ function Main() {
     }
   };
 
+  const handleReset = () => {
+    setName("");
+    setJob("");
+    setPalettes("1");
+    setEmail("");
+    setPhone("");
+    setLinkedin("");
+    setGithub("");
+  };
+
   return (
     <main className="mainProfile mainProfile__wrapper">
       {/* <div className="mainProfile__wrapper"> */}
       <PhotoCard
-        palettes={palettes}
+        palette={palette}
         name={name}
         job={job}
         email={email}
         phone={phone}
         linkedin={linkedin}
         github={github}
+        handleReset={handleReset}
       />
       <Form
-        palettes={palettes}
+        palette={palette}
         name={name}
         job={job}
         email={email}
