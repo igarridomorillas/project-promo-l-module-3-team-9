@@ -32,6 +32,7 @@ function Collapsable(props) {
   return (
     <>
       <Design
+        data={props.data}
         className={classDesign}
         handleInputLifting={props.handleInputLifting}
       >
@@ -51,6 +52,7 @@ function Collapsable(props) {
         </legend>
       </Design>
       <Fill
+        data={props.data}
         className={classFill}
         handleInputLifting={props.handleInputLifting}
         /* name={props.name} */ //value={props.value} //cambiado value por name

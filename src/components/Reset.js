@@ -6,11 +6,9 @@ function Reset(props) {
   };
   return (
     <div className="trash">
-      <button className="button js-reset" onClick={handleReset}>
+      <button className="button js-reset button__reset " onClick={handleReset}>
         <i className="far fa-trash-alt"></i>
-        <a className="button__reset " href="">
-          Reset
-        </a>
+        Reset
       </button>
     </div>
   );

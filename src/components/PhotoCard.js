@@ -6,18 +6,33 @@ import "../stylesheets/layout/_resetSection.scss";
 import Reset from "./Reset";
 
 function PhotoCard(props) {
+  /*   const github = props.data.github;
+  const linkedin = props.data.linkedin;
+  const palette = props.data.palette; */
+
+  const {
+    name,
+    job,
+    email,
+    phone,
+    photo,
+    github,
+    linkedin,
+    palette,
+  } = props.data;
+
   return (
     <section className="resetSection">
       <div className="resetSection__wrapper">
         <Reset handleReset={props.handleReset} />
-        <article className={`js-card palette${props.palette}`}>
+        <article className={`js-card palette${palette}`}>
           <div className="sample">
             <div className="sample__bar"></div>
             <h3 className="sample__name js-namePreview">
-              {props.name || "Nombre y Apellido"}
+              {name || "Nombre y Apellido"}
             </h3>
             <h4 className="sample__subtitle js-positionPreview">
-              {props.job || "Front-end developer"}
+              {job || "Front-end developer"}
             </h4>
             <div className="sample__photo js-profileImage"></div>
             <nav className="social">
@@ -25,7 +40,7 @@ function PhotoCard(props) {
                 <li className="social__menu--item">
                   <a
                     className="js-phonePreview"
-                    href={props.phone === "" ? "#" : `tel:${props.phone}`}
+                    href={phone === "" ? "#" : `tel:${props.phone}`}
                   >
                     <i className="fas fa-mobile-alt"></i>
                   </a>
@@ -34,7 +49,7 @@ function PhotoCard(props) {
                 <li className="social__menu--item">
                   <a
                     className="js-emailPreview"
-                    href={props.email === "" ? "#" : `mailto:${props.email}`}
+                    href={email === "" ? "#" : `mailto:${props.email}`}
                   >
                     <i className="fas fa-envelope"></i>
                   </a>
@@ -44,9 +59,9 @@ function PhotoCard(props) {
                   <a
                     className="js-linkedinPreview"
                     href={
-                      props.linkedin.includes("https://www.linkedin.com/in/")
-                        ? `${props.linkedin}`
-                        : `https://www.linkedin.com/in/${props.linkedin}`
+                      linkedin.includes("https://www.linkedin.com/in/")
+                        ? `${linkedin}`
+                        : `https://www.linkedin.com/in/${linkedin}`
                     }
                     target="_blank"
                   >
@@ -58,9 +73,9 @@ function PhotoCard(props) {
                   <a
                     className="js-githubPreview"
                     href={
-                      props.github.includes("https://github.com/")
-                        ? `${props.github}`
-                        : `https://github.com/${props.github}`
+                      github.includes("https://github.com/")
+                        ? `${github}`
+                        : `https://github.com/${github}`
                     }
                     target="_blank"
                   >

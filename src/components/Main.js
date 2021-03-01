@@ -3,16 +3,33 @@ import PhotoCard from "./PhotoCard";
 import Form from "./Form";
 
 function Main() {
-  const [palette, setPalettes] = useState("1");
+  const [data, setData] = useState({
+    palette: "1",
+    name: "",
+    job: "",
+    phone: "",
+    email: "",
+    linkedin: "",
+    github: "",
+    photo: "",
+  });
+  /*   const [palette, setPalettes] = useState("1");
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [linkedin, setLinkedin] = useState("");
-  const [github, setGithub] = useState("");
+  const [github, setGithub] = useState(""); */
 
   const handleInputLifting = (inputValue, inputName) => {
-    if (inputName === "name") {
+    //data[inputName] = inputValue; NO VALE
+
+    setData({
+      ...data,
+      [inputName]: inputValue,
+    });
+
+    /*  if (inputName === "name") {
       setName(inputValue);
     } else if (inputName === "job") {
       setJob(inputValue);
@@ -26,42 +43,34 @@ function Main() {
       setLinkedin(inputValue);
     } else if (inputName === "github") {
       setGithub(inputValue);
-    }
+    } */
   };
 
   const handleReset = () => {
-    setName("");
+    setData({
+      palette: "1",
+      name: "",
+      job: "",
+      phone: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      photo: "",
+    });
+    /* setName("");
     setJob("");
     setPalettes("1");
     setEmail("");
     setPhone("");
     setLinkedin("");
-    setGithub("");
+    setGithub(""); */
   };
 
   return (
     <main className="mainProfile mainProfile__wrapper">
       {/* <div className="mainProfile__wrapper"> */}
-      <PhotoCard
-        palette={palette}
-        name={name}
-        job={job}
-        email={email}
-        phone={phone}
-        linkedin={linkedin}
-        github={github}
-        handleReset={handleReset}
-      />
-      <Form
-        palette={palette}
-        name={name}
-        job={job}
-        email={email}
-        phone={phone}
-        linkedin={linkedin}
-        github={github}
-        handleInputLifting={handleInputLifting}
-      />
+      <PhotoCard data={data} handleReset={handleReset} />
+      <Form data={data} handleInputLifting={handleInputLifting} />
       {/* </div> */}
     </main>
   );

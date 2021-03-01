@@ -17,6 +17,7 @@ function Design(props) {
             className="design__radio js-palette"
             handleInputLifting={props.handleInputLifting}
             handleReset={props.handleReset}
+            checked={props.data.palette === "1"}
           />
         </label>
 
@@ -29,6 +30,7 @@ function Design(props) {
             className="design__radio js-palette"
             handleInputLifting={props.handleInputLifting}
             handleReset={props.handleReset}
+            checked={props.data.palette === "2"}
           />
         </label>
 
@@ -41,6 +43,7 @@ function Design(props) {
             className="design__radio js-palette"
             handleInputLifting={props.handleInputLifting}
             handleReset={props.handleReset}
+            checked={props.data.palette === "3"}
           />
         </label>
 
@@ -53,6 +56,7 @@ function Design(props) {
             className="design__radio js-palette"
             handleInputLifting={props.handleInputLifting}
             handleReset={props.handleReset}
+            checked={props.data.palette === "4"}
           />
         </label>
       </div>

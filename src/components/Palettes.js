@@ -22,6 +22,7 @@ function Palettes(props) {
         name={props.name}
         className="design__radio js-palette"
         onClick={handleInput}
+        checked={props.checked}
       />
       <ul className={"palette" + props.value}>{paintList}</ul>
     </label>
