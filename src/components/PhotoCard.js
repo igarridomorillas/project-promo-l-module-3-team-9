@@ -58,9 +58,9 @@ function PhotoCard(props) {
                   <a
                     className="js-githubPreview"
                     href={
-                      props.github.includes("https://www.github.com/")
+                      props.linkedin.includes("https://github.com/")
                         ? `${props.github}`
-                        : `https://www.github.com/${props.github}`
+                        : `https://github.com/${props.github}`
                     }
                     target="_blank"
                   >
