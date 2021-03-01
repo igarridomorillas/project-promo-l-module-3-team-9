@@ -2,6 +2,9 @@ import "../stylesheets/layout/_shareSection.scss";
 import ShareCreated from "./ShareCreated";
 
 function Share(props) {
+  const handleButton = () => {
+    props.sendDataToApi();
+  };
   return (
     <>
       <fieldset className={"collapsable js-slide3 " + props.className}>
@@ -10,7 +13,7 @@ function Share(props) {
         <div className="shareContainer js-content">
           <section className="share collapsable__hide">
             <div className="share__btn js-create-btn">
-              <button className="share__btn--text">
+              <button className="share__btn--text" onClick={handleButton}>
                 <i
                   className="share__btn--icon fa fa-address-card-o"
                   aria-hidden="true"
