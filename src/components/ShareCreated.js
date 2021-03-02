@@ -1,6 +1,4 @@
-import React from "react";
-
-function ShareCreated(props) {
+const ShareCreated = (props) => {
   return (
     <>
       <section className="created js-created created--hidden">
@@ -19,6 +17,6 @@ function ShareCreated(props) {
       </section>
     </>
   );
-}
+};
 
 export default ShareCreated;

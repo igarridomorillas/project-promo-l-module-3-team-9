@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PhotoCard from "./PhotoCard";
 import Form from "./Form";
-import ls from "./LocalStorage";
+import ls from "../services/LocalStorage";
 
 function Main() {
   const localStorageData = ls.get("userData") || {};
@@ -14,7 +14,7 @@ function Main() {
       email: "",
       linkedin: "",
       github: "",
-      photo: "",
+      photo: "../images/pepino.gif",
     }
   );
   useEffect(() => {

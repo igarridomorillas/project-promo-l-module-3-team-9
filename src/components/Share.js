@@ -4,13 +4,16 @@ import ShareFail from "./ShareFail";
 import senddatatoapi from "../services/api";
 import React, { useState } from "react";
 
-function Share(props) {
+const Share = (props) => {
+  const userData = props.children.props.data;
+
   const [cardCreated, setCardCreated] = useState("");
 
-  const handleButton = () => {
-    senddatatoapi().then((data) => {
-      const dataURL = data.url;
-      console.log(data);
+  const handleButton = (ev) => {
+    ev.preventDefault();
+    senddatatoapi(userData).then((data) => {
+      const dataURL = data.cardURL;
+      console.log(data.error);
       setCardCreated(dataURL);
     });
   };
@@ -33,9 +36,17 @@ function Share(props) {
           </section>
         </div>
       </fieldset>
-      {/* {cardCreated === "" ? null : <ShareCreated />}
-      {props.data.name !== "" && props.data.job !== "" ? null : <ShareFail />} */}
+      {cardCreated === "" ? null : <ShareCreated />}
+      {userData.name !== "" &&
+      userData.job !== "" &&
+      userData.photo !== "" &&
+      userData.email !== "" &&
+      userData.phone !== "" &&
+      userData.linkedin !== "" &&
+      userData.github !== "" ? null : (
+        <ShareFail data={userData} />
+      )}
     </>
   );
-}
+};
 export default Share;

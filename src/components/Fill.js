@@ -4,6 +4,9 @@ import LittlePreview from "./LittlePreview";
 import Input from "./Input";
 
 function Fill(props) {
+  const handlePhoto = (ev) => {
+    ev.preventDefault();
+  };
   return (
     <fieldset className={"collapsable js-slide2 " + props.className}>
       <div>{props.children}</div>
@@ -30,10 +33,17 @@ function Fill(props) {
           Imagen de perfil
         </label>
         <div className="photo">
-          <button className="photo__btn js-profileTrigger">
+          <button
+            onClick={handlePhoto}
+            className="photo__btn js-profileTrigger"
+          >
             Añadir imagen
           </button>
-          <input className="hidden js-profileUploadBtn" type="file" />
+          <input
+            onChange={handlePhoto}
+            className="hidden js-profileUploadBtn"
+            type="file"
+          />
           <LittlePreview />
         </div>
 
