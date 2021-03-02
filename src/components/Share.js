@@ -12,9 +12,10 @@ const Share = (props) => {
   const handleButton = (ev) => {
     ev.preventDefault();
     senddatatoapi(userData).then((data) => {
-      const dataURL = data.cardURL;
-      console.log(data.error);
-      setCardCreated(dataURL);
+      const dataError = data.error;
+      const dataSuccess = data.success;
+      console.log(data);
+      setCardCreated(dataError);
     });
   };
   return (
