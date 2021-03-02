@@ -4,6 +4,7 @@ import "../stylesheets/core/_mixins.scss";
 import "../stylesheets/core/_variables.scss";
 import "../stylesheets/layout/_resetSection.scss";
 import Reset from "./Reset";
+import { Link } from "react-router-dom";
 
 function PhotoCard(props) {
   /*   const github = props.data.github;
@@ -85,18 +86,14 @@ function PhotoCard(props) {
                   </a>
                 </li>
                 <li className="social__menu--home">
-                  <a
-                    className=""
-                    href="http://beta.adalab.es/project-promo-l-module-2-team-2/"
-                    target="_blank"
-                  >
+                  <Link to="/">
                     <img
                       src={logoCard}
                       className="social__menu--icon homeIcon filter"
                       title="thisIsMe web"
                       alt="this is me logo"
                     />
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

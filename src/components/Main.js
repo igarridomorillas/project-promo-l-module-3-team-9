@@ -1,18 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PhotoCard from "./PhotoCard";
 import Form from "./Form";
+import ls from "./LocalStorage";
 
 function Main() {
-  const [data, setData] = useState({
-    palette: "1",
-    name: "",
-    job: "",
-    phone: "",
-    email: "",
-    linkedin: "",
-    github: "",
-    photo: "",
-  });
+  const localStorageData = ls.get("userData") || {};
+  const [data, setData] = useState(
+    localStorageData.data || {
+      palette: "1",
+      name: "",
+      job: "",
+      phone: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      photo: "",
+    }
+  );
+  useEffect(() => {
+    ls.set("userData", { data });
+  }, [data]);
+
   /*   const [palette, setPalettes] = useState("1");
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
@@ -57,6 +65,7 @@ function Main() {
       github: "",
       photo: "",
     });
+    localStorage.clear();
     /* setName("");
     setJob("");
     setPalettes("1");
@@ -65,7 +74,6 @@ function Main() {
     setLinkedin("");
     setGithub(""); */
   };
-
   return (
     <main className="mainProfile mainProfile__wrapper">
       {/* <div className="mainProfile__wrapper"> */}
