@@ -18,7 +18,7 @@ function Main() {
     }
   );
   useEffect(() => {
-    ls.set("userData", { data: data });
+    ls.set("userData", { data });
   }, [data]);
 
   /*   const [palette, setPalettes] = useState("1");
