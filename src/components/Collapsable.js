@@ -76,7 +76,7 @@ function Collapsable(props) {
         <legend
           className="collapsable__header js-share"
           onClick={changeClassShare}
-          sendDataToApi={props.sendDatatoApi}
+          senddatatoapi={props.senddatatoapi}
         >
           <i
             className="collapsable__header--icon fa fa-share-alt"

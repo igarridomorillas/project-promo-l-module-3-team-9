@@ -8,7 +8,7 @@ function Form(props) {
       <Collapsable
         data={props.data}
         /* name={props.name} */ handleInputLifting={props.handleInputLifting}
-        sendDataToApi={props.sendDatatoApi}
+        senddatatoapi={props.senddatatoapi}
         /* value={props.name} */
       />
       {/*  </div> */}
