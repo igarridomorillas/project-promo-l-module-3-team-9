@@ -57,10 +57,9 @@ function PhotoCard(props) {
                     href={
                       linkedin.includes("https://www.linkedin.com/")
                         ? `${linkedin}`
-                        : `https://www.linkedin.com/in/${linkedin}`
-                      /*      : (linkedin = "")
-                        ? `https://www.linkedin.com/`
-                        : `https://www.linkedin.com/in/${linkedin}` */
+                        : linkedin
+                        ? `https://www.linkedin.com/in/${linkedin}`
+                        : `https://www.linkedin.com`
                     }
                     target="_blank"
                   >
