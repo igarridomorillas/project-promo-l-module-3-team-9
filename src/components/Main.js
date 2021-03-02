@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PhotoCard from "./PhotoCard";
 import Form from "./Form";
-import sendDataToApi from "../services/api";
 
 function Main() {
   const [data, setData] = useState({
@@ -13,11 +12,6 @@ function Main() {
     linkedin: "",
     github: "",
     photo: "",
-  });
-
-  sendDatatoApi().then((data) => {
-    console.log(data);
-    setData({ ...data, isLoading: false });
   });
 
   const handleInputLifting = (inputValue, inputName) => {
@@ -70,11 +64,7 @@ function Main() {
       {" "}
       {/* <div className="mainProfile__wrapper"> */}{" "}
       <PhotoCard data={data} handleReset={handleReset} />{" "}
-      <Form
-        data={data}
-        handleInputLifting={handleInputLifting}
-        sendDataToApi={sendDatatoApi()}
-      />{" "}
+      <Form data={data} handleInputLifting={handleInputLifting} />{" "}
       {/* </div> */}{" "}
     </main>
   );

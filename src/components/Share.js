@@ -1,9 +1,18 @@
 import "../stylesheets/layout/_shareSection.scss";
 import ShareCreated from "./ShareCreated";
+import ShareFail from "./ShareFail";
+import sendDataToApi from "../services/api";
+import React, { useState } from "react";
 
 function Share(props) {
+  const [cardCreated, setCardCreated] = useState("");
+
   const handleButton = () => {
-    props.sendDataToApi();
+    sendDataToApi().then((data) => {
+      const dataURL = data.url;
+      console.log(data);
+      setCardCreated(dataURL);
+    });
   };
   return (
     <>
@@ -24,7 +33,8 @@ function Share(props) {
           </section>
         </div>
       </fieldset>
-      <ShareCreated />
+      {cardCreated === "" ? null : <ShareCreated />}
+      {props.data.name !== "" && props.data.job !== "" ? null : <ShareFail />}
     </>
   );
 }

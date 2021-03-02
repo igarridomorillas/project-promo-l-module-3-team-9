@@ -14,8 +14,7 @@ const sendDataToApi = () => {
 
 export default sendDataToApi;
 
-/* .then((response) => response.json())
-.then((data) => {
+/* ...
   console.log("Server response:", data);
   shareLink = data.cardURL;
   if (data.success === true) {
