@@ -1,12 +1,9 @@
 import React from "react";
 import "../stylesheets/layout/_fillSection.scss";
-import LittlePreview from "./LittlePreview";
+import GetAvatar from "./GetAvatar";
 import Input from "./Input";
 
 function Fill(props) {
-  const handlePhoto = (ev) => {
-    ev.preventDefault();
-  };
   return (
     <fieldset className={"collapsable js-slide2 " + props.className}>
       <div>{props.children}</div>
@@ -29,23 +26,10 @@ function Fill(props) {
           handleInputLifting={props.handleInputLifting}
         />
 
-        <label htmlFor="photo" className="form__label">
-          Imagen de perfil
-        </label>
-        <div className="photo">
-          <button
-            onClick={handlePhoto}
-            className="photo__btn js-profileTrigger"
-          >
-            Añadir imagen
-          </button>
-          <input
-            onChange={handlePhoto}
-            className="hidden js-profileUploadBtn"
-            type="file"
-          />
-          <LittlePreview />
-        </div>
+        <GetAvatar
+          data={props.data.photo}
+          handleInputLifting={props.handleInputLifting}
+        />
 
         <Input
           name="email"

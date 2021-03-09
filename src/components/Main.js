@@ -14,7 +14,7 @@ function Main() {
       email: "",
       linkedin: "",
       github: "",
-      photo: "../images/pepino.gif",
+      photo: "",
     }
   );
   useEffect(() => {
@@ -31,7 +31,6 @@ function Main() {
 
   const handleInputLifting = (inputValue, inputName) => {
     //data[inputName] = inputValue; NO VALE
-
     setData({
       ...data,
       [inputName]: inputValue,

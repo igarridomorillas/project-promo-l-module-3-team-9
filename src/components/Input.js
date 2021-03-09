@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 function Input(props) {
   const handleInput = (ev) => {
+    debugger;
     props.handleInputLifting(ev.target.value, ev.target.name);
   };
 

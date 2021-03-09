@@ -5,6 +5,7 @@ import "../stylesheets/core/_variables.scss";
 import "../stylesheets/layout/_resetSection.scss";
 import Reset from "./Reset";
 import { Link } from "react-router-dom";
+import defaultAvatar from "../images/pepino.gif";
 
 function PhotoCard(props) {
   const {
@@ -31,7 +32,12 @@ function PhotoCard(props) {
             <h4 className="sample__subtitle js-positionPreview">
               {job || "Front-end developer"}
             </h4>
-            <div className="sample__photo js-profileImage"></div>
+            <div
+              className="sample__photo js-profileImage"
+              style={{
+                backgroundImage: `url(${photo === "" ? defaultAvatar : photo})`,
+              }}
+            ></div>
             <nav className="social">
               <ul className="social__menu">
                 <li className="social__menu--item">
