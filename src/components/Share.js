@@ -11,13 +11,20 @@ const Share = (props) => {
 
   const handleButton = (ev) => {
     ev.preventDefault();
+
     senddatatoapi(userData).then((data) => {
       const dataError = data.error;
-      const dataSuccess = data.success;
-      console.log(data);
-      setCardCreated(dataError);
+      const dataSuccess = data.cardURL;
+      console.log(data, dataSuccess);
+      setCardCreated(dataSuccess);
+      /*     if (dataError !== null) {
+        setCardCreated(dataSuccess);
+      } else {
+        setCardCreated(dataError);
+      } */
     });
   };
+
   return (
     <>
       <fieldset className={"collapsable js-slide3 " + props.className}>
@@ -37,7 +44,7 @@ const Share = (props) => {
           </section>
         </div>
       </fieldset>
-      {cardCreated === "" ? null : <ShareCreated />}
+      {cardCreated === "" ? null : <ShareCreated shareCreated={cardCreated} />}
       {userData.name !== "" &&
       userData.job !== "" &&
       userData.photo !== "" &&
