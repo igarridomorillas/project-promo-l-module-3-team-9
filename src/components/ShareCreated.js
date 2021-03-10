@@ -1,4 +1,5 @@
 const ShareCreated = (props) => {
+  const tweetHashtag = encodeURIComponent("Adalab,promoL,PromoLee,frontend");
   return (
     <>
       <section className="created ">
@@ -8,7 +9,7 @@ const ShareCreated = (props) => {
         </a>
         <button className="created__btnTwitter">
           <a
-            href="https://twitter.com/?lang=es"
+            href={`https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&url=Échale%20un%20vistazo%20a%20mi%20tarjeta%20virtual%20${props.shareCreated}&hashtags=${tweetHashtag}`}
             target="_blank"
             className="twitter"
           >
