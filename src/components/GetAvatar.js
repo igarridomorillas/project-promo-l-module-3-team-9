@@ -1,5 +1,6 @@
 import React from "react";
 import defaultAvatar from "../images/pepino.gif";
+import "../stylesheets/layout/_getAvatar.scss";
 
 const GetAvatar = (props) => {
   // creamos una propiedad de la clase que es la que vamos a usar en varios métodos para cargar la imagen
@@ -51,26 +52,30 @@ const GetAvatar = (props) => {
   };
   const avatar = props.data === "" ? defaultAvatar : props.data;
   return (
-    <div className="get-avatar">
+    <>
       <label htmlFor="photo" className="form__label">
         Imagen de perfil
       </label>
-      <label className="photo__btn js-profileTrigger" type="button">
-        Añadir imagen
-        <input
-          name="photo"
-          type="file"
-          ref={myFileField}
-          className="hidden js-profileUploadBtn"
-          onChange={uploadImage}
-        />
-      </label>
+      <div className="get-avatar">
+        <label className="photo__btn " type="button">
+          Añadir imagen
+          <input
+            name="photo"
+            type="file"
+            ref={myFileField}
+            className="hidden "
+            onChange={uploadImage}
+          />
+        </label>
 
-      <div
-        className="photo__preview js-inputText js-profilePreview"
-        style={{ backgroundImage: `url("${avatar}")`, backgroundSize: "cover" }}
-      ></div>
-    </div>
+        <div
+          className="photo__preview "
+          style={{
+            backgroundImage: `url("${avatar}")`,
+          }}
+        ></div>
+      </div>
+    </>
   );
 };
 
