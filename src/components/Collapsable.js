@@ -2,9 +2,12 @@ import Design from "./Design";
 import Fill from "./Fill";
 import Share from "./Share";
 import React, { useState } from "react";
+import topBurguer from "../images/top.png";
+import middleBurguer from "../images/middle.png";
+import bottomBurguer from "../images/bottom.png";
 
 function Collapsable(props) {
-  const [classDesign, setClassDesign] = useState("collapsable--open");
+  const [classDesign, setClassDesign] = useState("collapsable--close");
   const changeClassDesign = () => {
     if (classDesign === "collapsable--open") {
       setClassDesign("collapsable--close");
@@ -12,20 +15,20 @@ function Collapsable(props) {
       setClassDesign("collapsable--open");
     }
   };
-  const [classFill, setClassFill] = useState("collapsable--open");
+  const [classFill, setClassFill] = useState("collapsable--close");
   const changeClassFill = () => {
-    if (classFill === "") {
+    if (classFill === "collapsable--close") {
       setClassFill("collapsable--open");
     } else {
-      setClassFill("");
+      setClassFill("collapsable--close");
     }
   };
-  const [classShare, setClassShare] = useState("collapsable--open");
+  const [classShare, setClassShare] = useState("collapsable--close");
   const changeClassShare = () => {
-    if (classShare === "") {
+    if (classShare === "collapsable--close") {
       setClassShare("collapsable--open");
     } else {
-      setClassShare("");
+      setClassShare("collapsable--close");
     }
   };
 
@@ -45,10 +48,10 @@ function Collapsable(props) {
             aria-hidden="true"
           ></i>
           <span className="collapsable__title">Diseña</span>
-          <i
-            className="collapsable__header--arrow  collapsable__turn fa fa-angle-down"
-            aria-hidden="true"
-          ></i>
+          <img
+            src={topBurguer}
+            className="collapsable__header--arrow  collapsable__turn"
+          ></img>
         </legend>
       </Design>
       <Fill
@@ -66,10 +69,10 @@ function Collapsable(props) {
             aria-hidden="true"
           ></i>
           <span className="collapsable__title">Rellena</span>
-          <i
-            className="collapsable__header--arrow  collapsable__turn fa fa-angle-down"
-            aria-hidden="true"
-          ></i>
+          <img
+            src={middleBurguer}
+            className="collapsable__header--arrow  collapsable__turn"
+          ></img>
         </legend>
       </Fill>
       <Share className={classShare}>
@@ -83,10 +86,10 @@ function Collapsable(props) {
             aria-hidden="true"
           ></i>
           <span className="collapsable__title">Comparte</span>
-          <i
-            className="collapsable__header--arrow  collapsable__turn fa fa-angle-down"
-            aria-hidden="true"
-          ></i>
+          <img
+            src={bottomBurguer}
+            className="collapsable__header--arrow  collapsable__turn"
+          ></img>
         </legend>
       </Share>
     </>

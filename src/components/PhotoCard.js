@@ -5,7 +5,7 @@ import "../stylesheets/core/_variables.scss";
 import "../stylesheets/layout/_resetSection.scss";
 import Reset from "./Reset";
 import { Link } from "react-router-dom";
-import defaultAvatar from "../images/pepino.gif";
+import burger from "../images/burger-logo.png";
 
 function PhotoCard(props) {
   const {
@@ -90,7 +90,7 @@ function PhotoCard(props) {
                 <li className="social__menu--home">
                   <Link to="/">
                     <img
-                      src={logoCard}
+                      src={burger}
                       className="social__menu--icon homeIcon filter"
                       title="thisIsMe web"
                       alt="this is me logo"
