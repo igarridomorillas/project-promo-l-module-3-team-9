@@ -6,6 +6,7 @@ import "../stylesheets/layout/_resetSection.scss";
 import Reset from "./Reset";
 import { Link } from "react-router-dom";
 import burger from "../images/burger-logo.png";
+import defaultAvatar from "../images/pepino.gif";
 
 function PhotoCard(props) {
   const {
