@@ -4,6 +4,7 @@ import Form from "./Form";
 import ls from "../services/LocalStorage";
 
 function Main() {
+  const [cardCreated, setCardCreated] = useState("");
   const localStorageData = ls.get("userData") || {};
   const [data, setData] = useState(
     localStorageData.data || {
@@ -17,40 +18,19 @@ function Main() {
       photo: "",
     }
   );
+
   useEffect(() => {
     ls.set("userData", { data });
   }, [data]);
 
-  /*   const [palette, setPalettes] = useState("1");
-  const [name, setName] = useState("");
-  const [job, setJob] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [linkedin, setLinkedin] = useState("");
-  const [github, setGithub] = useState(""); */
-
   const handleInputLifting = (inputValue, inputName) => {
-    //data[inputName] = inputValue; NO VALE
     setData({
       ...data,
       [inputName]: inputValue,
     });
-
-    /*  if (inputName === "name") {
-          setName(inputValue);
-        } else if (inputName === "job") {
-          setJob(inputValue);
-        } else if (inputName === "palette") {
-          setPalettes(inputValue);
-        } else if (inputName === "email") {
-          setEmail(inputValue);
-        } else if (inputName === "phone") {
-          setPhone(inputValue);
-        } else if (inputName === "linkedin") {
-          setLinkedin(inputValue);
-        } else if (inputName === "github") {
-          setGithub(inputValue);
-        } */
+  };
+  const handleButtonLifting = (dataURL) => {
+    setCardCreated(dataURL);
   };
 
   const handleReset = () => {
@@ -64,22 +44,18 @@ function Main() {
       github: "",
       photo: "",
     });
+    setCardCreated("");
     localStorage.clear();
-    /* setName("");
-        setJob("");
-        setPalettes("1");
-        setEmail("");
-        setPhone("");
-        setLinkedin("");
-        setGithub(""); */
   };
   return (
     <main className="mainProfile mainProfile__wrapper">
-      {" "}
-      {/* <div className="mainProfile__wrapper"> */}{" "}
-      <PhotoCard data={data} handleReset={handleReset} />{" "}
-      <Form data={data} handleInputLifting={handleInputLifting} />{" "}
-      {/* </div> */}{" "}
+      <PhotoCard data={data} handleReset={handleReset} />
+      <Form
+        data={data}
+        cardCreated={cardCreated}
+        handleInputLifting={handleInputLifting}
+        handleButtonLifting={handleButtonLifting}
+      />
     </main>
   );
 }

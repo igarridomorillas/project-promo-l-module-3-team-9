@@ -75,7 +75,11 @@ function Collapsable(props) {
           ></img>
         </legend>
       </Fill>
-      <Share className={classShare}>
+      <Share
+        className={classShare}
+        cardCreated={props.cardCreated}
+        handleButtonLifting={props.handleButtonLifting}
+      >
         <legend
           className="collapsable__header js-share"
           onClick={changeClassShare}

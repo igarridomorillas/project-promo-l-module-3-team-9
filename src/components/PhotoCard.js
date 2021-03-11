@@ -1,5 +1,3 @@
-import React from "react";
-import logoCard from "../images/logo-card.png";
 import "../stylesheets/core/_mixins.scss";
 import "../stylesheets/core/_variables.scss";
 import "../stylesheets/layout/_resetSection.scss";

@@ -7,21 +7,13 @@ import React, { useState } from "react";
 const Share = (props) => {
   const userData = props.children.props.data;
 
-  const [cardCreated, setCardCreated] = useState("");
-
   const handleButton = (ev) => {
     ev.preventDefault();
 
     senddatatoapi(userData).then((data) => {
       const dataError = data.error;
-      const dataSuccess = data.cardURL;
-      console.log(data, dataSuccess);
-      setCardCreated(dataSuccess);
-      /*     if (dataError !== null) {
-        setCardCreated(dataSuccess);
-      } else {
-        setCardCreated(dataError);
-      } */
+      const dataURL = data.cardURL;
+      props.handleButtonLifting(dataURL);
     });
   };
 
@@ -44,7 +36,9 @@ const Share = (props) => {
           </section>
         </div>
       </fieldset>
-      {cardCreated === "" ? null : <ShareCreated shareCreated={cardCreated} />}
+      {props.cardCreated === "" ? null : (
+        <ShareCreated shareCreated={props.cardCreated} />
+      )}
       {userData.name !== "" &&
       userData.job !== "" &&
       userData.photo !== "" &&

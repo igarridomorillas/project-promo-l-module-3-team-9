@@ -4,14 +4,13 @@ import Collapsable from "./Collapsable";
 function Form(props) {
   return (
     <form className="form js-form form__wrapper" action="" method="POST">
-      {/* <div className="form__wrapper"> */}
       <Collapsable
         data={props.data}
-        /* name={props.name} */ handleInputLifting={props.handleInputLifting}
+        cardCreated={props.cardCreated}
+        handleInputLifting={props.handleInputLifting}
         senddatatoapi={props.senddatatoapi}
-        /* value={props.name} */
+        handleButtonLifting={props.handleButtonLifting}
       />
-      {/*  </div> */}
     </form>
   );
 }
