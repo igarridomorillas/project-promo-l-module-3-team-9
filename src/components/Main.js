@@ -29,8 +29,8 @@ function Main() {
       [inputName]: inputValue,
     });
   };
-  const handleButtonLifting = (dataURL) => {
-    setCardCreated(dataURL);
+  const handleButtonLifting = (cardURL) => {
+    setCardCreated(cardURL);
   };
 
   const handleReset = () => {

@@ -2,7 +2,6 @@ import "../stylesheets/layout/_shareSection.scss";
 import ShareCreated from "./ShareCreated";
 import ShareFail from "./ShareFail";
 import senddatatoapi from "../services/api";
-import React, { useState } from "react";
 
 const Share = (props) => {
   const userData = props.children.props.data;
@@ -11,12 +10,35 @@ const Share = (props) => {
     ev.preventDefault();
 
     senddatatoapi(userData).then((data) => {
-      const dataError = data.error;
       const dataURL = data.cardURL;
-      props.handleButtonLifting(dataURL);
+      if (data.success) {
+        props.handleButtonLifting(dataURL);
+      }
     });
   };
-
+  const serverMessage = () => {
+    let message = "";
+    if (
+      props.cardCreated === "" &&
+      (userData = {
+        palette: "1",
+        name: "",
+        job: "",
+        phone: "",
+        email: "",
+        linkedin: "",
+        github: "",
+        photo: "",
+      })
+    ) {
+      message = null;
+    } else if (props.cardCreated === "") {
+      message = <ShareFail />;
+    } else {
+      message = <ShareCreated shareCreated={props.cardCreated} />;
+    }
+    return message;
+  };
   return (
     <>
       <fieldset className={"collapsable js-slide3 " + props.className}>
@@ -36,18 +58,7 @@ const Share = (props) => {
           </section>
         </div>
       </fieldset>
-      {props.cardCreated === "" ? null : (
-        <ShareCreated shareCreated={props.cardCreated} />
-      )}
-      {userData.name !== "" &&
-      userData.job !== "" &&
-      userData.photo !== "" &&
-      userData.email !== "" &&
-      userData.phone !== "" &&
-      userData.linkedin !== "" &&
-      userData.github !== "" ? null : (
-        <ShareFail data={userData} />
-      )}
+      {serverMessage()}
     </>
   );
 };
