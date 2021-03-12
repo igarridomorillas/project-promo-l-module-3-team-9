@@ -11,8 +11,11 @@ const Share = (props) => {
     ev.preventDefault();
 
     senddatatoapi(userData).then((data) => {
+      console.log(data);
+      /* const dataAll = [data.cardURL, data.success]; */
       const dataError = data.error;
       const dataURL = data.cardURL;
+      /*   props.handleButtonLifting(dataAll); */
       props.handleButtonLifting(dataURL);
     });
   };
@@ -36,7 +39,7 @@ const Share = (props) => {
           </section>
         </div>
       </fieldset>
-      {props.cardCreated === "" ? null : (
+      {props.cardCreated === "" || "undefined" ? null : (
         <ShareCreated shareCreated={props.cardCreated} />
       )}
       {userData.name !== "" &&
@@ -45,9 +48,16 @@ const Share = (props) => {
       userData.email !== "" &&
       userData.phone !== "" &&
       userData.linkedin !== "" &&
-      userData.github !== "" ? null : (
+      userData.github !== "" ? null : userData.name === "" &&
+        userData.job === "" &&
+        userData.photo === "" &&
+        userData.email === "" &&
+        userData.phone === "" &&
+        userData.linkedin === "" &&
+        userData.github === "" ? null : (
         <ShareFail data={userData} />
       )}
+      {/*   Quitamos userdata... si props. cardCreated = x, muestrame shareFail */}
     </>
   );
 };

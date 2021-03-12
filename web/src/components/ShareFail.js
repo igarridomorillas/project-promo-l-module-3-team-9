@@ -10,7 +10,7 @@ const ShareFail = (props) => {
     } else if (props.data.phone === "") {
       message = "falta tu teléfono";
     } else if (props.data.linkedin === "") {
-      message = "falta tu usuario de LinkedIN";
+      message = "falta tu usuario de Linkedin";
     } else if (props.data.github === "") {
       message = "falta tu usario de GitHub";
     } else {

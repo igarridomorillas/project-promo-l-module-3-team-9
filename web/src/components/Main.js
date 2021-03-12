@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PhotoCard from "./PhotoCard";
 import Form from "./Form";
 import ls from "../services/LocalStorage";
+import ShareFail from "./ShareFail";
 
 function Main() {
   const [cardCreated, setCardCreated] = useState("");
@@ -31,6 +32,7 @@ function Main() {
   };
   const handleButtonLifting = (dataURL) => {
     setCardCreated(dataURL);
+    //if si es de una forma u otra
   };
 
   const handleReset = () => {
