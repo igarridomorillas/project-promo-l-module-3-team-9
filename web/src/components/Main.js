@@ -5,7 +5,11 @@ import ls from "../services/LocalStorage";
 import ShareFail from "./ShareFail";
 
 function Main() {
-  const [cardCreated, setCardCreated] = useState("");
+  const [cardCreated, setCardCreated] = useState({
+    success: null,
+    cardURL: "",
+    error: "",
+  });
   const localStorageData = ls.get("userData") || {};
   const [data, setData] = useState(
     localStorageData.data || {
@@ -30,8 +34,8 @@ function Main() {
       [inputName]: inputValue,
     });
   };
-  const handleButtonLifting = (dataURL) => {
-    setCardCreated(dataURL);
+  const handleButtonLifting = (card) => {
+    setCardCreated(card);
     //if si es de una forma u otra
   };
 

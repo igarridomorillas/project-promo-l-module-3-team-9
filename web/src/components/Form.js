@@ -8,7 +8,6 @@ function Form(props) {
         data={props.data}
         cardCreated={props.cardCreated}
         handleInputLifting={props.handleInputLifting}
-        senddatatoapi={props.senddatatoapi}
         handleButtonLifting={props.handleButtonLifting}
       />
     </form>

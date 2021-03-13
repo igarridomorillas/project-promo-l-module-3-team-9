@@ -76,6 +76,7 @@ function Collapsable(props) {
         </legend>
       </Fill>
       <Share
+        data={props.data}
         className={classShare}
         cardCreated={props.cardCreated}
         handleButtonLifting={props.handleButtonLifting}

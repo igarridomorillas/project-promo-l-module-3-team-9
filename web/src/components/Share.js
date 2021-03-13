@@ -2,21 +2,15 @@ import "../stylesheets/layout/_shareSection.scss";
 import ShareCreated from "./ShareCreated";
 import ShareFail from "./ShareFail";
 import senddatatoapi from "../services/api";
-import React, { useState } from "react";
 
 const Share = (props) => {
-  const userData = props.children.props.data;
+  const userData = props.data;
 
   const handleButton = (ev) => {
     ev.preventDefault();
 
-    senddatatoapi(userData).then((data) => {
-      console.log(data);
-      /* const dataAll = [data.cardURL, data.success]; */
-      const dataError = data.error;
-      const dataURL = data.cardURL;
-      /*   props.handleButtonLifting(dataAll); */
-      props.handleButtonLifting(dataURL);
+    senddatatoapi(userData).then((card) => {
+      props.handleButtonLifting(card);
     });
   };
 
@@ -39,25 +33,11 @@ const Share = (props) => {
           </section>
         </div>
       </fieldset>
-      {props.cardCreated === "" || "undefined" ? null : (
-        <ShareCreated shareCreated={props.cardCreated} />
-      )}
-      {userData.name !== "" &&
-      userData.job !== "" &&
-      userData.photo !== "" &&
-      userData.email !== "" &&
-      userData.phone !== "" &&
-      userData.linkedin !== "" &&
-      userData.github !== "" ? null : userData.name === "" &&
-        userData.job === "" &&
-        userData.photo === "" &&
-        userData.email === "" &&
-        userData.phone === "" &&
-        userData.linkedin === "" &&
-        userData.github === "" ? null : (
+      {props.cardCreated.success === false ? (
         <ShareFail data={userData} />
-      )}
-      {/*   Quitamos userdata... si props. cardCreated = x, muestrame shareFail */}
+      ) : props.cardCreated.success ? (
+        <ShareCreated shareCreated={props.cardCreated.cardURL} />
+      ) : null}
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 
 function Palettes(props) {
-  const PaletteItems = ["A", "B", "C"];
+  const PaletteItems = ["light", "medium", "dark"];
 
   const paintList = PaletteItems.map((item, index) => (
     <li key={index} className={"design__color color" + (index + 1)}>
