@@ -7,6 +7,14 @@ import middleBurguer from "../images/middle.png";
 import bottomBurguer from "../images/bottom.png";
 
 function Collapsable(props) {
+  const [shake, setShake] = useState("shake-slow");
+  const HandleShake = () => {
+    if (shake === "") {
+      setShake("shake-slow");
+    } else {
+      setShake("");
+    }
+  };
   const [classDesign, setClassDesign] = useState("collapsable--close");
   const changeClassDesign = () => {
     if (classDesign === "collapsable--open") {
@@ -50,7 +58,8 @@ function Collapsable(props) {
           <span className="collapsable__title">Diseña</span>
           <img
             src={topBurguer}
-            className="collapsable__header--arrow  collapsable__turn"
+            className={`collapsable__header--arrow  collapsable__turn ${shake}`}
+            onChange={HandleShake}
           ></img>
         </legend>
       </Design>
@@ -71,7 +80,8 @@ function Collapsable(props) {
           <span className="collapsable__title">Rellena</span>
           <img
             src={middleBurguer}
-            className="collapsable__header--arrow  collapsable__turn"
+            className={`collapsable__header--arrow  collapsable__turn ${shake}`}
+            onChange={HandleShake}
           ></img>
         </legend>
       </Fill>
@@ -93,7 +103,8 @@ function Collapsable(props) {
           <span className="collapsable__title">Comparte</span>
           <img
             src={bottomBurguer}
-            className="collapsable__header--arrow  collapsable__turn"
+            className={`collapsable__header--arrow  collapsable__turn  ${shake}`}
+            onChange={HandleShake}
           ></img>
         </legend>
       </Share>
