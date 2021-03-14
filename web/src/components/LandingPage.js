@@ -1,6 +1,6 @@
 import "../stylesheets/App.scss";
 import Footer from "./Footer";
-import logoThisIsMe from "../images/thisismeLogo@2x.png";
+import logoThisIsMe from "../images/logo-delicious.png";
 import { Link } from "react-router-dom";
 
 function LandingPage() {

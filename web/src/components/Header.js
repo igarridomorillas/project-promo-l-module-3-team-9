@@ -1,4 +1,4 @@
-import logoHeader from "../images/thisismeLogo@2x.png";
+import logoHeader from "../images/logo-delicious.png";
 import "../stylesheets/layout/_header.scss";
 import React from "react";
 import { Link } from "react-router-dom";

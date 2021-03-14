@@ -2,7 +2,11 @@
 @import "../core/_variables.scss";
 .resetSection {
   width: 100%;
-  background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+  background-color: linear-gradient(to bottom, #ffffff, #ffffff00);
+  background-image: url("../../images/burger-gradient.png");
+  background-size: cover;
+  //background-size: 300px;
+  //background-repeat: repeat;
   min-height: rem(500);
   @include tablet {
     margin: rem(20) rem(40);

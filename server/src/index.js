@@ -2,37 +2,36 @@ const express = require("express");
 const cors = require("cors");
 
 // create server
-const server = express();
+const app = express();
 
 // set express middleware
-server.use(express.json());
+app.use(express.json());
 
 // init express aplication
-const serverPort = 3000;
-server.listen(serverPort, () => {
-    console.log(`Server listening at http://localhost:${serverPort}`);
+const serverPort = 3001;
+app.listen(serverPort, () => {
+  console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
 // static server
 const staticServerPath = "./public";
-server.use(express.static(staticServerPath));
+app.use(express.static(staticServerPath));
 
 // api
 
-server.get("/card/:id:/", (req, res) => {
-    const response = {
-        users: [{ name: "Sofía" }, { name: "María" }],
-    };
-    res.json(response);
+app.get("/card", (req, res) => {
+  const response = "holi";
+  console.log(response);
+  res.json(response);
 });
 
-server.post("/card", (req, res) => {
-    // console request body params
-    console.log(
-        `Creating the user in database with user name: "${req.body.userName}"`
-    );
-    const response = {
-        result: `User created: ${req.body.userName}`,
-    };
-    res.json(response);
+app.post("/card", (req, res) => {
+  // console request body params
+  console.log(
+    `Creating the user in database with user name: "${req.body.userName}"`
+  );
+  const response = {
+    result: `User created: ${req.body.userName}`,
+  };
+  res.json(response);
 });
