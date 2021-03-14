@@ -19,19 +19,21 @@ app.use(express.static(staticServerPath));
 
 // api
 
-app.get("/card", (req, res) => {
-  const response = "holi";
-  console.log(response);
+app.post("/card", (req, res) => {
+  // console request body params
+  console.log("REQ", req, "RES", res);
+  //   console.log(
+  //     `Creating the user in database with user name: "${req.body.userName}"`
+  //   );
+  const response = {
+    result: `User created: ${req.body.userData}`,
+  };
   res.json(response);
 });
 
-app.post("/card", (req, res) => {
-  // console request body params
-  console.log(
-    `Creating the user in database with user name: "${req.body.userName}"`
-  );
-  const response = {
-    result: `User created: ${req.body.userName}`,
-  };
+app.get("/card/card", (req, res) => {
+  // app.get("/card/id/", (req, res) => {
+  const response = "holi";
+  console.log(response);
   res.json(response);
 });
