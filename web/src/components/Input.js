@@ -1,16 +1,9 @@
-import React from "react";
 import PropTypes from "prop-types";
 
-function Input(props) {
+const Input = (props) => {
   const handleInput = (ev) => {
     props.handleInputLifting(ev.target.value, ev.target.name);
   };
-
-  /*   const handleInput = (ev) => {
-    props.handleInputLifting({
-    inputName:ev.target.value
-    inputValue:ev.target.value
-)}; */
 
   return (
     <>
@@ -29,7 +22,7 @@ function Input(props) {
       />
     </>
   );
-}
+};
 
 Input.propTypes = {
   name: PropTypes.string,

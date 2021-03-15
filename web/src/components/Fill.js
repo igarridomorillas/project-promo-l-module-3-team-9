@@ -1,9 +1,8 @@
-import React from "react";
 import "../stylesheets/layout/_fillSection.scss";
 import GetAvatar from "./GetAvatar";
 import Input from "./Input";
 
-function Fill(props) {
+const Fill = (props) => {
   return (
     <fieldset className={"collapsable js-slide2 " + props.className}>
       <div>{props.children}</div>
@@ -66,6 +65,6 @@ function Fill(props) {
       </div>
     </fieldset>
   );
-}
+};
 
 export default Fill;

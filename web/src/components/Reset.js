@@ -1,6 +1,4 @@
-import React from "react";
-
-function Reset(props) {
+const Reset = (props) => {
   const handleReset = () => {
     props.handleReset();
   };
@@ -12,5 +10,5 @@ function Reset(props) {
       </button>
     </div>
   );
-}
+};
 export default Reset;

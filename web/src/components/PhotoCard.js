@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import burger from "../images/burger-logo.png";
 import defaultAvatar from "../images/pepino.gif";
 
-function PhotoCard(props) {
+const PhotoCard = (props) => {
   const {
     name,
     job,

@@ -1,12 +1,13 @@
 import "../stylesheets/layout/_footer.scss";
-import React from "react";
 import logoAdalab from "../images/logo-adalab.png";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__wrapper">
-        <small className="footer__wrapper--copy">Delicious Code &copy; 2021</small>
+        <small className="footer__wrapper--copy">
+          Delicious Code &copy; 2021
+        </small>
         <a href="https://adalab.es/" target="_blank">
           <img
             className="footer__wrapper--adalab"
@@ -17,6 +18,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

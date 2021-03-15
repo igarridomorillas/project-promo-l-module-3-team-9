@@ -6,7 +6,7 @@ import topBurguer from "../images/top.png";
 import middleBurguer from "../images/middle.png";
 import bottomBurguer from "../images/bottom.png";
 
-function Collapsable(props) {
+const Collapsable = (props) => {
   const [shake, setShake] = useState("shake-slow");
   const HandleShake = () => {
     if (shake === "") {
@@ -67,7 +67,6 @@ function Collapsable(props) {
         data={props.data}
         className={classFill}
         handleInputLifting={props.handleInputLifting}
-        /* name={props.name} */ //value={props.value} //cambiado value por name
       >
         <legend
           className="collapsable__header js-fill"
@@ -110,6 +109,6 @@ function Collapsable(props) {
       </Share>
     </>
   );
-}
+};
 
 export default Collapsable;

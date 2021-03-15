@@ -1,4 +1,3 @@
-import React from "react";
 import defaultAvatar from "../images/pepino.gif";
 import "../stylesheets/layout/_getAvatar.scss";
 

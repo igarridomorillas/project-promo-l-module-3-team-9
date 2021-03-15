@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import logoThisIsMe from "../images/logo-delicious.png";
 import { Link } from "react-router-dom";
 
-function LandingPage() {
+const LandingPage = () => {
   return (
     <>
       <main className="main">

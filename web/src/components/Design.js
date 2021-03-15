@@ -1,8 +1,7 @@
-import React from "react";
 import "../stylesheets/layout/_designSection.scss";
 import Palettes from "./Palettes";
 
-function Design(props) {
+const Design = (props) => {
   return (
     <fieldset className={"collapsable js-slide1 " + props.className}>
       <div>{props.children}</div>
@@ -62,6 +61,6 @@ function Design(props) {
       </div>
     </fieldset>
   );
-}
+};
 
 export default Design;

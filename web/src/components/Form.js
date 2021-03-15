@@ -1,7 +1,6 @@
-import React from "react";
 import Collapsable from "./Collapsable";
 
-function Form(props) {
+const Form = (props) => {
   return (
     <form className="form js-form form__wrapper" action="" method="POST">
       <Collapsable
@@ -12,6 +11,6 @@ function Form(props) {
       />
     </form>
   );
-}
+};
 
 export default Form;

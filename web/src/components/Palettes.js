@@ -1,6 +1,4 @@
-import React from "react";
-
-function Palettes(props) {
+const Palettes = (props) => {
   const PaletteItems = ["light", "medium", "dark"];
 
   const paintList = PaletteItems.map((item, index) => (
@@ -27,6 +25,6 @@ function Palettes(props) {
       <ul className={"palette" + props.value}>{paintList}</ul>
     </label>
   );
-}
+};
 
 export default Palettes;

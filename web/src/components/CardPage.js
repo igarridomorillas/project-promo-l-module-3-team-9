@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";
 
-function CardPage() {
+const CardPage = () => {
   return (
     <>
       <Header />
@@ -11,6 +11,6 @@ function CardPage() {
       <Footer />
     </>
   );
-}
+};
 
 export default CardPage;

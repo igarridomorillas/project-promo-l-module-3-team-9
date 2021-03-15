@@ -1,9 +1,9 @@
 import "../stylesheets/App.scss";
 import LandingPage from "./LandingPage";
 import CardPage from "./CardPage";
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
     <>
       <Switch>
@@ -16,6 +16,6 @@ function App() {
       </Switch>
     </>
   );
-}
+};
 
 export default App;
