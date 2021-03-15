@@ -1,7 +1,7 @@
 import "../stylesheets/layout/_shareSection.scss";
 import ShareCreated from "./ShareCreated";
 import ShareFail from "./ShareFail";
-import sendCard from "../services/api";
+import api from "../services/api";
 
 const Share = (props) => {
   const userData = props.data;
@@ -13,7 +13,7 @@ const Share = (props) => {
     //     props.handleButtonLifting(card);
     //   });
     // };
-    sendCard(userData).then((card) => {
+    api.sendCard(userData).then((card) => {
       props.handleButtonLifting(card);
     });
   };
