@@ -9,13 +9,12 @@ Para ver el proyecto tienes dos opciones: hacer click [aquí](https://delicious-
 
 ## Instalación
 
-1.	Instalar Visual Studio Code
-2.	Clonar este repositorio
-3.	Introducir en la terminal npm install
-4.	Introducir en la terminal npm start para poder hacer cambios y verlos a tiempo real
-5.	Introducir en la terminal npm install express
-6.	Introducir en la terminal npm install cors
-7.	Introducir en la terminar npm build
+1.	Clonar este repositorio
+2.	Introducir en la terminal npm install
+3.	Introducir en la terminal npm start para poder hacer cambios y verlos a tiempo real
+4.	Introducir en la terminal npm install express
+5.	Introducir en la terminal npm install cors
+6.	Introducir en la terminar npm build
 
 
 ## Descripción
@@ -41,10 +40,16 @@ Delicious Profile Card
 │   │   ├── Footer.js
 │   │   ├── Form.js
 │   │   ├── GetAvatar.js
-│   │   ├── Filters.js
-│   │   ├── Footer.js
 │   │   ├── Header.js
-│   │   └── Loading.js
+│   │   ├── Input.js
+│   │   ├── LandingPage.js
+│   │   ├── LandingPage.js
+│   │   ├── LandingPage.js
+│   │   ├── LandingPage.js
+│   │   ├── LandingPage.js
+│   │   ├── LandingPage.js
+│   │   └── Main.js
+
 │   ├── images
 │   │    ├── background.gif
 │   │    ├── header_image.gif
