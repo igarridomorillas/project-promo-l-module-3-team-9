@@ -1,3 +1,4 @@
+![image](logo-delicious.png)
 # Delicious Profile Card
 
 `Delicious Profile Card` es un proyecto creado por las cuatro integrantes del equipo `Delicious Code`: [Cristina Blanco](https://github.com/CrisBIB), [Marta Cano](https://github.com/Martcacio), [Mercedes Fe](https://github.com/mermfb) y [Natalia Migallón](https://github.com/NataliaMigallon). 
