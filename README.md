@@ -1,6 +1,6 @@
 # Delicious Profile Card
 
-Delicious Profile Card es un proyecto creado por las cuatro integrantes del equipo Delicious Code: [Cristina Blanco](https://github.com/CrisBIB), [Marta Cano](https://github.com/Martcacio), [Mercedes Fe](https://github.com/mermfb) y [Natalia Migallón](https://github.com/NataliaMigallon). 
+`Delicious Profile Card` es un proyecto creado por las cuatro integrantes del equipo `Delicious Code`: [Cristina Blanco](https://github.com/CrisBIB), [Marta Cano](https://github.com/Martcacio), [Mercedes Fe](https://github.com/mermfb) y [Natalia Migallón](https://github.com/NataliaMigallon). 
 En él hemos programado una aplicación que genera tarjetas de visita virtuales con los datos personales de la usuaria (nombre, puesto de trabajo, email, foto de perfil, teléfono, y cuentas de Linkedin y GitHub), y que puede ser compartida a través de las diferentes redes sociales mediante URL compartida. 
 Para desarrollar esta web hemos utilizado diferentes herramientas como HTML5, CSS3, SASS, Java Script y React, además de programar nuestro propio servidor con NODE JS y su módulo Express JS.
 
