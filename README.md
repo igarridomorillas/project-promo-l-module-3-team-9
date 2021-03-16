@@ -35,7 +35,6 @@ Delicious Profile Card
 ├── src
 ├── view/pages
 ├── web
-│   ├── docs
 │   ├── node_modules
 │   ├── public
 │   ├── src
