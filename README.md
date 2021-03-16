@@ -1,18 +1,25 @@
-# Getting Started with Create React App
+# Delicious Profile Card
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Delicious Profile Card es un proyecto creado por las cuatro integrantes del equipo Delicious Code: [Cristina Blanco](https://github.com/CrisBIB), [Marta Cano](https://github.com/Martcacio), [Mercedes Fe](https://github.com/mermfb) y [Natalia Migallón](https://github.com/NataliaMigallon). 
+En él hemos programado una aplicación que genera tarjetas de visita virtuales con los datos personales de la usuaria (nombre, puesto de trabajo, email, foto de perfil, teléfono, y cuentas de Linkedin y GitHub), y que puede ser compartida a través de las diferentes redes sociales mediante URL compartida. 
+Para desarrollar esta web hemos utilizado diferentes herramientas como HTML5, CSS3, SASS, Java Script y React, además de programar nuestro propio servidor con NODE JS y su módulo Express JS.
+Para ver el proyecto tienes dos opciones: hacer click aquí, o instalarlo en tu ordenador.
 
-## Available Scripts
+## Instalación
 
-In the project directory, you can run:
+1.	Instalar Visual Studio Code
+2.	Clonar este repositorio
+3.	Introducir en la terminal npm install
+4.	Introducir en la terminal npm start para poder hacer cambios y verlos a tiempo real
+5.	Introducir en la terminal npm install express
+6.	Introducir en la terminal npm install cors
+7.	Introducir en la terminar npm build
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Descripción
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+La SPA (Single Page Application) empieza con una sencilla “landing” que consta del logotipo, un footer y una somera descripción tanto escrita como visual a través de tres iconos, en donde la usuaria puede ver en qué consiste la web. Dándole al botón `COMENZAR` le redirige a la denominada “cardpage”, que es el contenido principal. La interfaz se divide verticalmente en el header, protagonizado por el logotipo, el main, donde se sitúa la propia aplicación, y el footer. En la horizontal, el main se subdivide en una mitad izquierda que recoge el formulario, y la otra mitad derecha, donde se previsualiza la tarjeta a la vez que la usuaria va interactuando. A su vez, el formulario está estructurado en tres partes en la vertical: la primera es la sección “diseña”, donde ponemos a disposición de la usuaria cuatro paletas de color con distintas tonalidades; la segunda es la parte de “rellena”, donde se tienen que introducir los datos que conformarán la tarjeta, así como una fotografía; y la tercera es el botón de `CREAR TARJETA`.
+
 
 ### `npm test`
 
