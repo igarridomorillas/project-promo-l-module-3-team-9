@@ -25,7 +25,62 @@ La interfaz se divide verticalmente en el header, protagonizado por el logotipo,
 A su vez, el formulario está estructurado en tres partes en la vertical: la primera es la sección “diseña”, donde ponemos a disposición de la usuaria cuatro paletas de color con distintas tonalidades; la segunda es la parte de “rellena”, donde se tienen que introducir los datos que conformarán la tarjeta, así como una fotografía; y la tercera es el botón de `CREAR TARJETA`.
 
 
-### `npm test`
+## Estructura del proyecto
+
+Delicious Profile Card
+├── docs
+├── node_modules
+├── public
+├── src
+│   ├── components
+│   │   ├── App.js
+│   │   ├── CardPage.js
+│   │   ├── Collapsable.js
+│   │   ├── Design.js
+│   │   ├── Fill.js
+│   │   ├── Footer.js
+│   │   ├── Form.js
+│   │   ├── GetAvatar.js
+│   │   ├── Filters.js
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   │   └── Loading.js
+│   ├── images
+│   │    ├── background.gif
+│   │    ├── header_image.gif
+│   │    ├── header_logo.png
+│   │    ├── rick_morty_mobile.jpg
+│   │    ├── rick_morty_tablet.jpg
+│   │    └── rick_morty_desktop.jpg
+│   ├── services
+│   │    ├── api.js
+│   │    └── localStorage.js
+│   ├── stylesheets
+│   │   ├── core
+│   │   │   ├── _reset.scss
+│   │   │   └── _variables.scss
+│   │   ├── layout
+│   │   │   ├── _characterCard.scss
+│   │   │   ├── _characterDetail.scss
+│   │   │   ├── _characterList.scss
+│   │   │   ├── _filterByGender.scss
+│   │   │   ├── _filterByName.scss
+│   │   │   ├── _filterBySpecies.scss
+│   │   │   ├── _filterByStatus.scss
+│   │   │   ├── _filters.scss
+│   │   │   ├── _footer.scss
+│   │   │   ├── _header.scss
+│   │   │   └── _loading.scss
+│   │   ├── pages
+│   │   │   └── index.scss
+│   │   └── App.scss
+│   └── index.js
+├── .gitignore
+├── debug.log
+├── LICENSE
+├── package-lock.json
+├── package.json
+└── README.md
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
