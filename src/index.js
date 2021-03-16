@@ -8,7 +8,8 @@ const app = express();
 app.use(cors());
 
 // set express middleware
-app.use(express.json());
+app.use(express.json({ limit: "10mb" }));
+app.set("view engine", "ejs");
 
 // init express aplication
 const serverPort = process.env.PORT || 3001;
@@ -24,17 +25,24 @@ app.use(express.static(staticServerPath));
 
 //app.get("/card/card", (req, res) => {
 app.get("/card/:id", (req, res) => {
-  const response = "holi";
-  // console.log(response);
-  res.json(response);
+  console.log(data);
+  res.render("pages/card", data);
 });
 
 app.post("/card", (req, res) => {
   // console request body params
-  console.log("REQ", req.body);
-
   const response = {};
 
+  /*   for (let item in req.body) {
+    if (!item) {
+      (response.success = false),
+        (response.error = `Missing ${item} parameter`);
+    } else {
+      //todo ok -> save to db
+      response.success = true;
+      response.cardURL = "PONER DIRECCIÓN herokua";
+    }
+  } */
   if (!req.body.name) {
     response.success = false;
     response.error = "Missing name parameter";
@@ -59,9 +67,9 @@ app.post("/card", (req, res) => {
   } else {
     //todo ok -> save to db
     response.success = true;
-    response.cardURL = "PONER DIRECCIÓN herokua";
+    const id = "";
+    response.cardURL = `https://delicious-profile-card.herokuapp.com/#/${id}`;
   }
 
   res.json(response);
-  console.log(response);
 });
