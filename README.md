@@ -27,7 +27,7 @@ A su vez, el formulario está estructurado en tres partes en la vertical: la pri
 
 ## Estructura del proyecto
 
-Delicious Profile Card
+`Delicious Profile Card
 ├── docs
 ├── node_modules
 ├── public
@@ -80,7 +80,7 @@ Delicious Profile Card
 ├── LICENSE
 ├── package-lock.json
 ├── package.json
-└── README.md
+└── README.md`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
