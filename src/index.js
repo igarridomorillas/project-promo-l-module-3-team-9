@@ -32,7 +32,7 @@ app.get("/card/:id", (req, res) => {
 app.post("/card", (req, res) => {
   // console request body params
   const response = {};
-
+  console.log(req.body);
   /*   for (let item in req.body) {
     if (!item) {
       (response.success = false),
