@@ -10,11 +10,13 @@ Para ver el proyecto tienes dos opciones: hacer click [aquí](https://delicious-
 ## Instalación
 
 1.	Clonar este repositorio
-2.	Introducir en la terminal npm install
-3.	Introducir en la terminal npm start para poder hacer cambios y verlos a tiempo real
 4.	Introducir en la terminal npm install express
 5.	Introducir en la terminal npm install cors
-6.	Introducir en la terminar npm build
+6.	install nodemon
+7.	install SASS
+8.	install dentro de carpeta WEB
+9.	Introducir en la terminar npm run dev para arrancar el proyec
+10.	install
 
 
 ## Descripción
