@@ -9,15 +9,15 @@ Para ver el proyecto tienes dos opciones: hacer click [aquí](https://delicious-
 
 ## Instalación
 
-1.	Clonar este repositorio
-4.	Introducir en la terminal npm install express
-5.	Introducir en la terminal npm install cors
-6.	install nodemon
-7.	install SASS
-8.	install dentro de carpeta WEB
-9.	Introducir en la terminar npm run dev para arrancar el proyec
-10.	install
-
+Si quieres instalar y ejecutar el proyecto completo:
+  1. Clonar este repositorio
+  2. Entrar en la carpeta raíz
+  3. Ejecuta en la terminal `npm install`
+  4. Para lanzar el proyecto: ejecuta en la terminal `npm start` o `npm run dev`
+Si quieres probar o modificar la parte del front-end con React:
+  1. Entra en la carpeta `/web/`
+  2. Ejecuta npm install
+  3. Para lanzar sólo la parte front-end del proyecto, ejecuta `npm start` dentro de la carpeta `/web/`
 
 ## Descripción
 
@@ -29,65 +29,72 @@ A su vez, el formulario está estructurado en tres partes en la vertical: la pri
 ## Estructura del proyecto
 ```
 Delicious Profile Card
-├── docs
+
 ├── node_modules
 ├── public
 ├── src
-│   ├── components
-│   │   ├── App.js
-│   │   ├── CardPage.js
-│   │   ├── Collapsable.js
-│   │   ├── Design.js
-│   │   ├── Fill.js
-│   │   ├── Footer.js
-│   │   ├── Form.js
-│   │   ├── GetAvatar.js
-│   │   ├── Header.js
-│   │   ├── Input.js
-│   │   ├── LandingPage.js
-│   │   ├── LandingPage.js
-│   │   ├── LandingPage.js
-│   │   ├── LandingPage.js
-│   │   ├── LandingPage.js
-│   │   ├── LandingPage.js
-│   │   └── Main.js
-
-│   ├── images
-│   │    ├── background.gif
-│   │    ├── header_image.gif
-│   │    ├── header_logo.png
-│   │    ├── rick_morty_mobile.jpg
-│   │    ├── rick_morty_tablet.jpg
-│   │    └── rick_morty_desktop.jpg
-│   ├── services
-│   │    ├── api.js
-│   │    └── localStorage.js
-│   ├── stylesheets
-│   │   ├── core
-│   │   │   ├── _reset.scss
-│   │   │   └── _variables.scss
-│   │   ├── layout
-│   │   │   ├── _characterCard.scss
-│   │   │   ├── _characterDetail.scss
-│   │   │   ├── _characterList.scss
-│   │   │   ├── _filterByGender.scss
-│   │   │   ├── _filterByName.scss
-│   │   │   ├── _filterBySpecies.scss
-│   │   │   ├── _filterByStatus.scss
-│   │   │   ├── _filters.scss
-│   │   │   ├── _footer.scss
-│   │   │   ├── _header.scss
-│   │   │   └── _loading.scss
-│   │   ├── pages
+├── view/pages
+├── web
+│   ├── docs
+│   ├── node_modules
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   │   │   ├── App.js
+│   │   │   ├── CardPage.js
+│   │   │   ├── Collapsable.js
+│   │   │   ├── Design.js
+│   │   │   ├── Fill.js
+│   │   │   ├── Footer.js
+│   │   │   ├── Form.js
+│   │   │   ├── GetAvatar.js
+│   │   │   ├── Header.js
+│   │   │   ├── Input.js
+│   │   │   ├── LandingPage.js
+│   │   │   ├── Main.js
+│   │   │   ├── Palettes.js
+│   │   │   ├── PhotoCard.js
+│   │   │   ├── Reset.js
+│   │   │   ├── Share.js
+│   │   │   ├── ShareCreated.js
+│   │   │   └── ShareFail.js
+│   │   ├── images
+│   │   ├── services
+│   │   │   ├── api.js
+│   │   │   └── localStorage.js
+│   │   ├── stylesheets
+│   │   │   ├── core
+│   │   │   │   ├── _functions.scss
+│   │   │   │   ├── _mixins.scss
+│   │   │   │   ├── _reset.scss
+│   │   │   │   └── _variables.scss
+│   │   │   ├── layout
+│   │   │   │   ├── _collapsable.scss
+│   │   │   │   ├── _designSection.scss
+│   │   │   │   ├── _fillSection.scss
+│   │   │   │   ├── _footer.scss
+│   │   │   │   ├── _formSection.scss
+│   │   │   │   ├── _getAvatar.scss
+│   │   │   │   ├── _header.scss
+│   │   │   │   ├── _mainHome.scss
+│   │   │   │   ├── _mainprofile.scss
+│   │   │   │   ├── _profile.scss
+│   │   │   │   ├── _resetSection.scss
+│   │   │   │   └── _shareSection.scss
+│   │   │   ├── pages
+│   │   │   │   └── index.scss
+│   │   │   ├── App.scss
 │   │   │   └── index.scss
-│   │   └── App.scss
-│   └── index.js
+│   │   └── index.js
+│   ├── .gitignore
+│   ├── desktop.ini
+│   ├── package-lock.json
+│   ├── package.json
+│   └── README.mde
 ├── .gitignore
-├── debug.log
-├── LICENSE
+├── desktop.ini
 ├── package-lock.json
-├── package.json
-└── README.md
+└── package.json
 ```
 
 Launches the test runner in the interactive watch mode.\
