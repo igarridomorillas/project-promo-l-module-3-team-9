@@ -88,9 +88,9 @@ Delicious Profile Card
 │   ├── .gitignore
 │   ├── desktop.ini
 │   ├── package-lock.json
-│   ├── package.json
-│   └── README.mde
+│   └── package.json
 ├── .gitignore
+├── README.mde
 ├── desktop.ini
 ├── package-lock.json
 └── package.json
