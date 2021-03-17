@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/f2e0e49a34.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://csshake.surge.sh/csshake.min.css" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="/static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <title>Create cards</title>
+    <link href="/static/css/main.883a2663.chunk.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <main>
+        <article class="palette<%= palette %>">
+            <div class="sample">
+                <div class="sample__bar"></div>
+                <h3 class="sample__name">
+                    <%= name %>
+                </h3>
+                <h4 class="sample__subtitle js-positionPreview">
+                    <%= job %>
+                </h4>
+                <div class="sample__photo js-profileImage" style="background-image:url('<%= photo %>');"></div>
+                <nav class="social">
+                    <ul class="social__menu">
+                        <li class="social__menu--item">
+                            <a class="js-phonePreview" href='tel:<%= phone %>'>
+                                <i class="fas fa-mobile-alt"></i>
+                            </a>
+                        </li>
+
+                        <li class="social__menu--item">
+                            <a class="js-emailPreview" href='mailto:<%= email %>'>
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+
+                        <li class="social__menu--item">
+                            <a class="js-linkedinPreview" href="https://www.linkedin.com/<%= linkedin %>" target="_blank" alt="Enlace a Linkedin" title="Enlace a Linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <!-- <a class="js-linkedinPreview" href={ <%=linkedin %>.includes("https://www.linkedin.com/") ?
+                                `` :
+                                <%=linkedin %> ? `https://www.linkedin.com/in/` : `https://www.linkedin.com` }
+                                    target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                            </a> -->
+                        </li>
+
+                        <li class="social__menu--item">
+                            <a class="js-githubPreview" href="https://www.github.com/<%=github %>" target="_blank" alt="Enlace a GitHub" title="Enlace a GitHub">
+                                <i class="fab fa-github-alt"></i>
+                            </a>
+                            <!-- <a class="js-githubPreview" href={ <%=github %>.includes("https://github.com/") ? `` :
+                                `https://github.com/` } target="_blank">
+                                <i class="fab fa-github-alt"></i>
+                            </a> -->
+                        </li>
+                        <li class="social__menu--home">
+                            <Link to="/">
+                            <img src="/static/media/burger-logo.84822f6d.png" class="social__menu--icon homeIcon filter" title="Delicious profile-card web" alt="Delicious logo" />
+                            </Link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+$defaultFontSize: 16;
+// fonts
+$fontTitle: "Merriweather",
+serif;
+$fontText: "Open Sans",
+sans-serif;
+$fontSecondary: "Montserrat",
+sans-serif;
+// fonts size
+$sizeSmall: rem(14);
+$sizeTitle: rem(18);
+// colors
+$colorComplementaryA: #000000;
+$colorMediaA: #3d4141;
+$colorMediaB: #438792;
+$colorMediaC: #a2deaf;
+$colorComplementaryB: #f9f4dc;
+$colorBg: #ffffff;
+$colorIcon: #ff8a00;
+$colorBgHome: #f5f5f5;
+$colorSections: #54585a;
+$colorSmall: #6b6b6b;
+$colorBorFooter: #d8d8d8;
+//colors palette-1
+$colorPalette1A: $colorMediaA;
+$colorPalette1B: $colorMediaB;
+$colorPalette1C: $colorMediaC;
+//colors palette-2
+$colorPalette2A: #420101;
+$colorPalette2B: #bd1010;
+$colorPalette2C: #e95626;
+//colors palette-3
+$colorPalette3A: #3e5b65;
+$colorPalette3B: #eab052;
+$colorPalette3C: #a0c0cf;
+//colors palette-4
+$colorPalette4A: #ffac00;
+$colorPalette4B: #1a7e1f;
+$colorPalette4C: #eb4e00;
