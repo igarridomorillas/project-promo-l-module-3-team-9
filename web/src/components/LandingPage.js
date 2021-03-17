@@ -1,6 +1,6 @@
 import "../stylesheets/App.scss";
 import Footer from "./Footer";
-import logoThisIsMe from "../images/logo-delicious.png";
+import logoDelicious from "../images/logo-delicious.png";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
@@ -10,7 +10,7 @@ const LandingPage = () => {
         <div className="shake-slow shake-constant main__logo">
           <img
             className="main__logo--image"
-            src={logoThisIsMe}
+            src={logoDelicious}
             alt="Logo This is me"
             title="logo"
           />
@@ -45,6 +45,6 @@ const LandingPage = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default LandingPage;

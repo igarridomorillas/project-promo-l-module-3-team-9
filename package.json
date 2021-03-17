@@ -4,8 +4,9 @@
     "description": "version proyecto modulo 4",
     "main": "index.js",
     "scripts": {
-        "start": "cd web && npm install && npm run build && cd .. && npm install && npm start",
-        "dev": "cd web && npm start && cd .. && npm run dev"
+        "start": "node src/index.js",
+        "build": "cd web && npm run docs && cd .. && rm -rf public && mv web/docs public",
+        "dev": "nodemon src/index.js"
     },
     "repository": {
         "type": "git",
@@ -27,6 +28,7 @@
     },
     "homepage": "https://github.com/Adalab/project-promo-l-module-3-team-9#readme",
     "dependencies": {
+        "better-sqlite3": "^7.1.2",
         "cors": "^2.8.5",
         "ejs": "^3.1.6",
         "express": "^4.17.1"

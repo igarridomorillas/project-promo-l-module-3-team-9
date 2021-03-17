@@ -30,9 +30,6 @@
     }
     &--image {
       width: 100%;
-      // @include tablet {
-      //   width: 100%;
-      // }
     }
   }
   &__slogan {
@@ -80,7 +77,6 @@
     @include tablet {
       width: rem(325);
       height: rem(86);
-      /*  margin-bottom: rem(127); */
       border: solid rem(2) rgba($color: $colorIcon, $alpha: 0.21);
       border-radius: rem(5);
     }
