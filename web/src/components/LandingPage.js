@@ -1,25 +1,37 @@
 import "../stylesheets/App.scss";
+import React, { useState } from "react";
 import Footer from "./Footer";
 import logoDelicious from "../images/logo-delicious.png";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
+  const [shake, setShake] = useState("shake-slow");
+  const HandleShake = () => {
+    if (shake === "") {
+      setShake("shake-slow");
+    } else {
+      setShake("");
+    }
+  };
   return (
     <>
       <main className="main">
-        <div className="shake-slow shake-constant main__logo">
+        <div className={`main__logo ${shake}`}>
           <img
             className="main__logo--image"
             src={logoDelicious}
-            alt="Logo This is me"
+            alt="Logo Delicious"
             title="logo"
+            onChange={HandleShake}
           />
         </div>
 
         <section className="main__slogan">
           <h2 className="main__slogan--title">Crea tu tarjeta de visita</h2>
-          <p className="main__slogan--text">Tienes mucho que ofrecer</p>
-          <p className="main__slogan--text">¡Preséntate al mundo!</p>
+          <p className="main__slogan--text">
+            Crea mejores contactos profesionales
+          </p>
+          <p className="main__slogan--text">de forma fácil y cómoda</p>
         </section>
 
         <section className="main__icons">

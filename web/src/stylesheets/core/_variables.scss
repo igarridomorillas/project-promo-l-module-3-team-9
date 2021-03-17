@@ -1,14 +1,14 @@
 $defaultFontSize: 16;
-
 // fonts
-$fontTitle: "Merriweather", serif;
-$fontText: "Open Sans", sans-serif;
-$fontSecondary: "Montserrat", sans-serif;
-
+$fontTitle: "Merriweather",
+serif;
+$fontText: "Open Sans",
+sans-serif;
+$fontSecondary: "Montserrat",
+sans-serif;
 // fonts size
 $sizeSmall: rem(14);
 $sizeTitle: rem(18);
-
 // colors
 $colorComplementaryA: #000000;
 $colorMediaA: #3d4141;
@@ -21,7 +21,6 @@ $colorBgHome: #f5f5f5;
 $colorSections: #54585a;
 $colorSmall: #6b6b6b;
 $colorBorFooter: #d8d8d8;
-
 //colors palette-1
 $colorPalette1A: $colorMediaA;
 $colorPalette1B: $colorMediaB;
@@ -35,6 +34,6 @@ $colorPalette3A: #3e5b65;
 $colorPalette3B: #eab052;
 $colorPalette3C: #a0c0cf;
 //colors palette-4
-$colorPalette4A: #1a7e1f;
-$colorPalette4B: #eb4e00;
-$colorPalette4C: #ffac00;
+$colorPalette4A: #ffac00;
+$colorPalette4B: #1a7e1f;
+$colorPalette4C: #eb4e00;

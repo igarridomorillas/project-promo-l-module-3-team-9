@@ -5,16 +5,16 @@ const ShareFail = (props) => {
       message = "falta tu nombre";
     } else if (props.data.job === "") {
       message = "falta tu puesto";
+    } else if (props.data.photo === "") {
+      message = "falta tu foto";
     } else if (props.data.email === "") {
       message = "falta tu e-mail";
     } else if (props.data.phone === "") {
       message = "falta tu teléfono";
     } else if (props.data.linkedin === "") {
       message = "falta tu usuario de Linkedin";
-    } else if (props.data.github === "") {
-      message = "falta tu usario de GitHub";
     } else {
-      message = "falta tu foto";
+      message = "falta tu usario de GitHub";
     }
     return message;
   };
