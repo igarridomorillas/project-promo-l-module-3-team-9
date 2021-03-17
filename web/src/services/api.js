@@ -14,10 +14,10 @@
 
 // export default senddatatoapi;
 
-const isDevEnviroment = process.env.NODE_ENV === "development"; // Booleano
+/* const isDevEnviroment = process.env.NODE_ENV === "development"; // Booleano
 const apiUrl = isDevEnviroment
   ? "http://localhost:3001"
-  : "https://delicious-profile-card.herokuapp.com/";
+  : "https://delicious-profile-card.herokuapp.com/"; */
 
 const getCard = () => {
   return (

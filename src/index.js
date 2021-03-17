@@ -34,10 +34,10 @@ const db = new Database("./src/data/cards.db", {
 
 //app.get("/card/card", (req, res) => {
 app.get("/card/:id", (req, res) => {
-  const query = db.prepare(`SELECT * FROM cards WHERE id = ?`);
+  const query = db.prepare("SELECT * FROM cards WHERE id = ?");
   const data = query.get(req.params.id);
 
-  console.log(data);
+  console.log("JASON data: ", data);
   res.render("pages/card", data);
 });
 
@@ -78,9 +78,28 @@ app.post("/card", (req, res) => {
     response.error = "Missing github parameter";
   } else {
     //todo ok -> save to db
+
+    const query = db.prepare(
+      "INSERT INTO cards (name, job, photo, phone, email, linkedin, github, palette) VALUES (?,?,?,?,?,?,?,?)"
+    );
+    const result = query.run(
+      req.body.name,
+      req.body.job,
+      req.body.photo,
+      req.body.phone,
+      req.body.email,
+      req.body.linkedin,
+      req.body.github,
+      req.body.palette
+    );
     response.success = true;
-    const id = "";
-    response.cardURL = `https://delicious-profile-card.herokuapp.com/#/${id}`;
+    if (req.host === "localhost") {
+      response.cardURL = "http://localhost:3001/card/" + result.lastInsertRowid;
+    } else {
+      req.host =
+        "https://delicious-profile-card.herokuapp.com/card/" +
+        result.lastInsertRowid;
+    }
   }
 
   res.json(response);
